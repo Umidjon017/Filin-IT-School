@@ -20,7 +20,7 @@
                     @method('PUT')
                     <div class="card-body">
                         <div class="form-group">
-                            <label>Name</label>
+                            <label> {{ __('Name') }} </label>
                             <input type="text" class="form-control" name="name" value="{{ $headerButton->name }}" placeholder="Enter header button name">
                             @error('name')
                                 <div class="alert alert-danger">
@@ -29,7 +29,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Url</label>
+                            <label> {{ __('Url') }} </label>
                             <input type="url" class="form-control" name="url" value="{{ $headerButton->url }}" placeholder="Enter header button url">
                             @error('url')
                                 <div class="alert alert-danger">
@@ -38,7 +38,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Order Number</label>
+                            <label> {{ __('Order Number') }} </label>
                             <input type="number" class="form-control" name="order" value="{{ $headerButton->order }}" placeholder="Enter header button order number">
                             @error('order')
                                 <div class="alert alert-danger">
@@ -47,11 +47,11 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <div class="control-label">Status</div>
+                            <div class="control-label"> {{ __('Status') }} </div>
                             <label class="custom-switch mt-2">
                                 <input type="checkbox" class="custom-switch-input" name="status" @if($headerButton->status == 1) checked @endif>
                                 <span class="custom-switch-indicator"></span>
-                                <span class="custom-switch-description">Press to activate/inactivate the status</span>
+                                <span class="custom-switch-description"> {{ __('Press to activate/inactivate the status') }} </span>
                             </label>
                         </div>
                     </div>
