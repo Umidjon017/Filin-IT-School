@@ -11,6 +11,9 @@
             <li class="dropdown {{ request()->is('admin/dashboard*') ? 'active' : ''  }}">
                 <a href="{{ route('admin.dashboard') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Dashboard") }}</span></a>
             </li>
+            <li class="dropdown {{ request()->is('admin/header-button*') ? 'active' : ''  }}">
+                <a href="{{ route('admin.header-button.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Header Buttons") }}</span></a>
+            </li>
 
             {{-- @can('product-list') --}}
             {{-- <li class="dropdown {{ request()->is('admin/product-categories/*') ? 'active' : ''  }}">

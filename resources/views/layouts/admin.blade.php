@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ $title ?? config('app.name', 'Laravel') }}</title>
     <!-- General CSS Files -->
     <link rel="stylesheet" href="{{ asset("/assets/css/app.min.css") }}">
     <!-- Template CSS -->
@@ -24,23 +24,23 @@
         <div class="main-wrapper main-wrapper-1">
 
             {{-- Navbar --}}
-            <x-admin.navbar></x-admin.navbar>
+            @include('layouts.navbar')
 
             {{-- Main Sidebar --}}
-            <x-admin.main-sidebar></x-admin.main-sidebar>
+            @include('layouts.main-sidebar')
 
                 <!-- Main Content -->
                 <div class="main-content">
 
-                    @yield('content')
+                    {{ $slot }}
 
                     {{-- Setting sidebar --}}
-                    <x-admin.setting-sidebar></x-admin.setting-sidebar>
+                    @include('layouts.setting-sidebar')
 
                 </div>
 
             {{-- Footer --}}
-            <x-admin.footer></x-admin.footer>
+            @include('layouts.footer')
 
         </div>
 
