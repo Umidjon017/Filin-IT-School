@@ -17,6 +17,9 @@
             <li class="dropdown {{ request()->is('admin/footer-button*') ? 'active' : ''  }}">
                 <a href="{{ route('admin.footer-button.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Footer Buttons") }}</span></a>
             </li>
+            <li class="dropdown {{ request()->is('admin/training-program*') ? 'active' : ''  }}">
+                <a href="{{ route('admin.training-program.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Training Programs") }}</span></a>
+            </li>
 
             {{-- @can('product-list') --}}
             {{-- <li class="dropdown {{ request()->is('admin/product-categories/*') ? 'active' : ''  }}">
