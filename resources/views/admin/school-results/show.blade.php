@@ -28,7 +28,7 @@
                     <div class="col-md-6 col-sm-12">
                         <div class="d-flex justify-content-between">
                             <h5> {{ __('Title') }} </h5>
-                            <h6> {{ $schoolResult->title }} </h6>
+                            <h6 class="text-break"> {{ $schoolResult->title }} </h6>
                         </div> <hr>
 
                         <div class="d-flex justify-content-between">

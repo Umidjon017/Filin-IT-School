@@ -34,7 +34,7 @@
                             <tr>
                                 <th>{{ __('#') }}</th>
                                 <th>{{ __('Title') }}</th>
-                                <th class="text-break">{{ __('Body') }}</th>
+                                <th>{{ __('Body') }}</th>
                                 <th class="text-center">{{ __('Action') }}</th>
                             </tr>
                             </thead>
@@ -42,8 +42,8 @@
                             @foreach($blockTextOne as $block)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $block->title }}</td>
-                                    <td>{!! $block->body !!}</td>
+                                    <td class="text-break">{{ $block->title }}</td>
+                                    <td class="text-break">{!! $block->body !!}</td>
                                     <td class="d-flex justify-content-center">
                                         <a class="btn btn-primary" href="{{route('admin.block-text-one.show', $block->id)}}">
                                             <i class="fas fa-eye"></i>

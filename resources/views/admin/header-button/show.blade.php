@@ -26,7 +26,7 @@
                 <hr>
                 <div class="d-flex justify-content-between">
                     <h5> {{ __('Name') }} </h5>
-                    <h6> {{ $headerButton->name }} </h6>
+                    <h6 class="text-break"> {{ $headerButton->name }} </h6>
                 </div> <hr>
 
                 <div class="d-flex justify-content-between">

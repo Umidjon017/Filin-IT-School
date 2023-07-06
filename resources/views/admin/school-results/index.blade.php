@@ -35,7 +35,7 @@
                                 <th>{{ __('#') }}</th>
                                 <th>{{ __('Icon') }}</th>
                                 <th>{{ __('Title') }}</th>
-                                <th class="text-break">{{ __('Description') }}</th>
+                                <th>{{ __('Description') }}</th>
                                 <th class="text-center">{{ __('Action') }}</th>
                             </tr>
                             </thead>
@@ -44,8 +44,8 @@
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td><img src="/admin/images/school-results/{{ $result->icon }}" width="100px"></td>
-                                    <td>{{ $result->title }}</td>
-                                    <td>{!! $result->description !!}</td>
+                                    <td class="text-break">{{ $result->title }}</td>
+                                    <td class="text-break">{!! $result->description !!}</td>
                                     <td class="d-flex justify-content-center">
                                         <a class="btn btn-primary" href="{{route('admin.school-results.show', $result->id)}}">
                                             <i class="fas fa-eye"></i>

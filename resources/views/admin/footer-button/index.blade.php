@@ -44,7 +44,7 @@
                             @foreach($footerButtons as $button)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $button->name }}</td>
+                                    <td class="text-break">{{ $button->name }}</td>
                                     <td class="text-break">{{ $button->url }}</td>
                                     <td>{{ $button->order }}</td>
                                     <td>

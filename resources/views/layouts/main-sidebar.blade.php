@@ -49,6 +49,10 @@
                 <a href="{{ route('admin.school-results.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("School Results") }}</span></a>
             </li>
 
+            <li class="dropdown {{ request()->routeIs('admin.pages*') ? 'active' : ''  }}">
+                <a href="{{ route('admin.pages.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Pages") }}</span></a>
+            </li>
+
             {{-- @can('product-list') --}}
             {{-- <li class="dropdown {{ request()->is('admin/product-categories/*') ? 'active' : ''  }}">
               <a href="#" class="menu-toggle nav-link has-dropdown" ><i class="fas fa-list-alt"></i><span>{{ __("Mahsulot kategoriyasi") }}</span></a>
