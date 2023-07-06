@@ -15,7 +15,7 @@ class HeaderButtonController extends Controller
      */
     public function index(): View
     {
-        $headerButtons = HeaderButton::paginate(10, ['*'], 'header_buttons');
+        $headerButtons = HeaderButton::paginate(5);
 
         return view('admin.header-button.index', compact('headerButtons'));
     }

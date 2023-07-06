@@ -53,7 +53,7 @@
 
                             <div class="col-6">
                                 <div>
-                                    <img src="/admin/images/school-results/{{ $schoolResult->icon }}" width="100%">
+                                    <img src="{{ asset('/admin/images/school-results/'.$schoolResult->icon) }}" width="100%">
                                 </div>
                             </div>
                         </div>

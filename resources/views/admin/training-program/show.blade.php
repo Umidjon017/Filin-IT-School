@@ -51,7 +51,7 @@
                     <div class="col-md-6 col-sm-12">
                         <h2 class="text-center"> {{ __('Icon') }} </h2>
                         <div>
-                            <img src="/admin/images/training-programs/{{ $trainingProgram->icon }}" width="100%">
+                            <img src="{{ asset('/admin/images/training-programs/'.$trainingProgram->icon) }}" width="100%">
                         </div>
                     </div>
                 </div>

@@ -45,7 +45,7 @@
                     <div class="col-md-6 col-sm-12">
                         <h2 class="text-center"> {{ __('Image') }} </h2>
                         <div>
-                            <img src="/admin/images/banners/{{ $banner->image }}" width="100%">
+                            <img src="{{ asset('/admin/images/banners/'.$banner->image) }}" width="100%">
                         </div>
                     </div>
                 </div>

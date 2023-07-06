@@ -1,0 +1,329 @@
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 165px;
+  background: rgba(255, 255, 255, 0.50);
+  backdrop-filter: blur(20px);
+  padding: 0 150px;
+  z-index: 100;
+}
+.burger__btn{
+  display: none;
+}
+.navbar__right{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .nav__phone{
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+    background: #5ABB2C;
+    box-shadow: 5px 5px 50px 0px rgba(0, 0, 0, 0.30);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+  }
+  .nav__user{
+    width: 81px;
+    height: 81px;
+    border-radius: 82px;
+    background: #FF9A24;
+    box-shadow: 5px 5px 50px 0px rgba(0, 0, 0, 0.30);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+      width: calc(100% - 5px);
+      height: calc(100% - 5px);
+    }
+  }
+}
+._address, ._phone{
+  color: #000;
+  font-size: 20px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140.9%;
+}
+.nav{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 0 56px 0 15px;
+  &__top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 41px;
+  }
+  &__bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    li{
+      a{
+        color: #0D0D0D;
+        font-size: 22px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: lowercase;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1570px) {
+  .navbar{
+    padding: 0 100px;
+  }
+}
+@media (max-width: 1440px) {
+  .navbar{
+    padding: 0 40px;
+  }
+  .navbar__right{
+    .nav__user{
+      width: 75px;
+      height: 75px;
+    }
+  }
+  ._address, ._phone{
+    font-size: 18px;
+  }
+  .nav{
+    &__bottom{
+      li{
+        a{
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .logo{
+    a{
+      img{
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+}
+@media (max-width:1220px) {
+  .active{
+    font-weight: 700 !important;
+  }
+  .burger__btn{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 2;
+    button{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: none;
+      border: none;
+      // gap: 5px;
+      width: 30px;
+      height: 20px;
+      div{
+        display: block;
+        width: 25px;
+        height: 2px;
+        background: #000;
+        margin: 2px 0;
+        transition: 0.4s linear;
+      }
+    }
+    .btn__close{
+      div:nth-child(1){
+        transform: translateY(6px) rotate(45deg);
+      }
+      div:nth-child(2){
+        transform: scale(0);
+      }
+      div:nth-child(3){
+        transform: translateY(-6px) rotate(135deg);
+      }
+    }
+  }
+  .navbar{
+    background: rgb(255, 255, 255);
+    backdrop-filter: none;
+    height: 110px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: flex-end;
+    .logo{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .navbar__right{
+    justify-content: flex-end;
+    .nav__user{
+      width: 40px;
+      height: 40px;
+    }
+  }
+  ._address, ._phone{
+    font-size: 16px;
+  }
+  .nav{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0 40px;
+    &__top{
+      margin-bottom: 0;
+    }
+    &__bottom{
+      position: fixed;
+      top: 110px;
+      left: -257px;
+      flex-direction: column;
+      align-items: flex-start;
+      border-radius: 0px 20px 20px 0px;
+      background: rgba(255, 255, 255, 0.70);
+      backdrop-filter: blur(5px);
+      width: 257px;
+      flex-shrink: 0;
+      transition: 0.4s linear;
+      overflow: hidden;
+      li{
+        padding: 10px 10px 10px 40px;
+        width: 100%;
+        transition: 0.2s linear;
+        &:hover{
+          background: #FF9A24;
+        }
+        a{
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .nav__show{
+    .nav__bottom{
+      left: 0;
+    }
+  }
+  .logo{
+    a{
+      img{
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+}
+@media (max-width:1024px) {
+  ._address, ._phone{
+    font-size: 14px;
+  }
+}
+@media (max-width:768px) {
+  ._address,._phone{
+    font-size: 11px;
+  }
+  .nav{
+    &__bottom{
+      li{
+        padding: 15px 10px 15px 30px;
+        a{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+@media (max-width:620px) {
+  .navbar{
+    height: 60px;
+    align-items: center;
+    padding: 0 20px;
+  }
+  .logo{
+    a{
+      display: block;
+      width: 45px;
+      height: 45px;
+      img{
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
+  ._phone, ._address{
+    font-size: 10px;
+  }
+  .nav{
+    position: fixed;
+    top: 60px;
+    left: -257px;
+    width: 257px;
+    padding: 0;
+    border-radius: 0px 20px 20px 0px;
+    background: rgba(255, 255, 255, 0.70);
+    backdrop-filter: blur(5px);
+    transition: 0.4s linear;
+    &__top{
+      flex-direction: column;
+      align-items: flex-start;
+      height: 50px;
+      border-radius: 0px 20px 0px 0px;
+      background: var(--green-placeh, #DDEBCB);
+      padding: 10px 10px 10px 20px;
+      &::after{
+        content: "";
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 181px;
+        height: 1px;
+        background: black;
+
+      }
+    }
+    &__bottom{
+      left: 0;
+      top: 0;
+      position: relative;
+      border-radius: 0px 0 20px 0;
+      background: none;
+      backdrop-filter: none;
+    }
+  }
+  .nav__show{
+    left: 0;
+  }
+  .navbar__right{
+    .nav__phone{
+      display: flex;
+    }
+    .nav__user{
+      width: 35px;
+      height: 35px;
+    }
+  }
+}

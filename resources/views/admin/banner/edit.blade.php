@@ -62,7 +62,7 @@
 
                             <div class="col-6">
                                 <div>
-                                    <img src="/admin/images/banners/{{ $banner->image }}" width="100%">
+                                    <img src="{{ asset('/admin/images/banners/'.$banner->image) }}" width="100%">
                                 </div>
                             </div>
                         </div>

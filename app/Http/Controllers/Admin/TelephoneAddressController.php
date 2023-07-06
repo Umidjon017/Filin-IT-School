@@ -15,7 +15,7 @@ class TelephoneAddressController extends Controller
      */
     public function index(): View
     {
-        $telephoneAddress = TelephoneAddress::paginate(10, ['*'], 'telephone_addresses');
+        $telephoneAddress = TelephoneAddress::paginate(5);
 
         return view('admin.telephone-address.index', compact('telephoneAddress'));
     }

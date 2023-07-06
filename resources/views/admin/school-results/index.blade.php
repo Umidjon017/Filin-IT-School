@@ -43,7 +43,7 @@
                             @foreach($schoolResults as $result)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td><img src="/admin/images/school-results/{{ $result->icon }}" width="100px"></td>
+                                    <td><img src="{{ asset('/admin/images/school-results/'.$result->icon) }}" width="100px"></td>
                                     <td class="text-break">{{ $result->title }}</td>
                                     <td class="text-break">{!! $result->description !!}</td>
                                     <td class="d-flex justify-content-center">

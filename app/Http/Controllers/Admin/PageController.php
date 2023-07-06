@@ -15,7 +15,7 @@ class PageController extends Controller
      */
     public function index(): View
     {
-        $pages = Page::paginate(10, ['*'], 'pages');
+        $pages = Page::paginate(5);
 
         return view('admin.pages.index', compact('pages'));
     }

@@ -10,7 +10,7 @@
 
                 <div class="card-header d-flex justify-content-between mt-2">
                     <h5>{{ __('Training Programs') }}</h5>
-                    <a class="btn btn-primary" href="{{ route('admin.training-programs.create')}}"> {{ __('Add') }} </a>
+                    <a class="btn btn-primary" href="{{ route('admin.training-programs.create') }}"> {{ __('Add') }} </a>
                 </div>
 
                 <div class="card-body">
@@ -18,14 +18,14 @@
                         <div class="alert alert-success alert-dismissible show fade">
                             <div class="alert-body">
                                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true"> <span>&times;</span> </button>
-                                <h5> <i class="icon fas fa-check"></i> {{session('success')}} </h5>
+                                <h5> <i class="icon fas fa-check"></i> {{ session('success') }} </h5>
                             </div>
                         </div>
                     @endif
                     @if (Session::has('warning'))
                         <div class="alert alert-danger alert-dismissible show fade">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true"> <span>&times;</span> </button>
-                            <h5> <i class="icon fas fa-ban"></i> {{session('warning')}} </h5>
+                            <h5> <i class="icon fas fa-ban"></i> {{ session('warning') }} </h5>
                         </div>
                     @endif
                     <div class="table-responsive">
@@ -44,7 +44,7 @@
                             @foreach($trainingPrograms as $program)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td><img src="/admin/images/training-programs/{{ $program->icon }}" width="100px"></td>
+                                    <td><img src="{{ asset('/admin/images/training-programs/'.$program->icon) }}" width="100px"></td>
                                     <td>{{ $program->name }}</td>
                                     <td>{{ $program->order }}</td>
                                     <td>

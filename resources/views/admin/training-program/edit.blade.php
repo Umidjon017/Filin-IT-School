@@ -61,7 +61,7 @@
 
                             <div class="col-6">
                                 <div>
-                                    <img src="/admin/images/training-programs/{{ $trainingProgram->icon }}" width="100%">
+                                    <img src="{{ asset('/admin/images/training-programs/'.$trainingProgram->icon) }}" width="100%">
                                 </div>
                             </div>
                         </div>

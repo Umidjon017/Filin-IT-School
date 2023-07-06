@@ -44,7 +44,7 @@
                             @foreach($banners as $program)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td><img src="/admin/images/banners/{{ $program->image }}" width="100px"></td>
+                                    <td><img src="{{ asset('/admin/images/banners/'.$program->image) }}" width="100px"></td>
                                     <td class="text-break">{{ $program->title }}</td>
                                     <td class="text-break">{{ $program->description }}</td>
                                     <td>{{ $program->order }}</td>

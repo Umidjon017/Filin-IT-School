@@ -15,7 +15,7 @@ class SchoolResultController extends Controller
      */
     public function index(): View
     {
-        $schoolResults = SchoolResult::paginate(10, ['*'], 'school_results');
+        $schoolResults = SchoolResult::paginate(5);
 
         return view('admin.school-results.index', compact('schoolResults'));
     }

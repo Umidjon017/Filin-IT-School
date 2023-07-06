@@ -10,7 +10,11 @@
 
                 <div class="card-header d-flex justify-content-between mt-2">
                     <h5>{{ __('Telephone Addresses') }}</h5>
-                    <a class="btn btn-primary" href="{{ route('admin.telephone-address.create')}}"> {{ __('Add') }} </a>
+                    @if($telephoneAddress->isEmpty())
+                        <a class="btn btn-primary" href="{{ route('admin.telephone-address.create')}}"> {{ __('Add') }} </a>
+                    @else
+                        <a href=""></a>
+                    @endif
                 </div>
 
                 <div class="card-body">
