@@ -8,17 +8,20 @@
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">{{ __("Main") }}</li>
-            <li class="dropdown {{ request()->is('admin/dashboard*') ? 'active' : ''  }}">
+            <li class="dropdown {{ request()->routeIs('admin.dashboard*') ? 'active' : ''  }}">
                 <a href="{{ route('admin.dashboard') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Dashboard") }}</span></a>
             </li>
-            <li class="dropdown {{ request()->is('admin/header-button*') ? 'active' : ''  }}">
+            <li class="dropdown {{ request()->routeIs('admin.header-button*') ? 'active' : ''  }}">
                 <a href="{{ route('admin.header-button.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Header Buttons") }}</span></a>
             </li>
-            <li class="dropdown {{ request()->is('admin/footer-button*') ? 'active' : ''  }}">
+            <li class="dropdown {{ request()->routeIs('admin.footer-button*') ? 'active' : ''  }}">
                 <a href="{{ route('admin.footer-button.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Footer Buttons") }}</span></a>
             </li>
-            <li class="dropdown {{ request()->is('admin/training-program*') ? 'active' : ''  }}">
+            <li class="dropdown {{ request()->routeIs('admin.training-program*') ? 'active' : ''  }}">
                 <a href="{{ route('admin.training-program.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Training Programs") }}</span></a>
+            </li>
+            <li class="dropdown {{ request()->routeIs('admin.telephone-address*') ? 'active' : ''  }}">
+                <a href="{{ route('admin.telephone-address.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Telephone Address") }}</span></a>
             </li>
 
             {{-- @can('product-list') --}}

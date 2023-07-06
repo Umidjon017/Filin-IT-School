@@ -37,7 +37,7 @@
                                     <th>{{ __('Url') }}</th>
                                     <th>{{ __('Order') }}</th>
                                     <th>{{ __('Status') }}</th>
-                                    <th>{{ __('Action') }}</th>
+                                    <th class="text-center">{{ __('Action') }}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -79,7 +79,7 @@
                 <div class="card-footer text-right">
                     <nav class="d-inline-block">
                         <ul class="pagination mb-0">
-                            {!! $headerButtons->onEachSide(5)->links() !!}
+                            {!! $headerButtons->links() !!}
                         </ul>
                     </nav>
                 </div>

@@ -21,7 +21,7 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label> {{ __('Name') }} </label>
-                            <input type="text" class="form-control" name="name" value="{{ $headerButton->name }}" placeholder="Enter header button name">
+                            <input type="text" class="form-control" name="name" value="{{ $headerButton->name }}">
                             @error('name')
                                 <div class="alert alert-danger">
                                     {{ $message }}
@@ -30,7 +30,7 @@
                         </div>
                         <div class="form-group">
                             <label> {{ __('Url') }} </label>
-                            <input type="url" class="form-control" name="url" value="{{ $headerButton->url }}" placeholder="Enter header button url">
+                            <input type="url" class="form-control" name="url" value="{{ $headerButton->url }}">
                             @error('url')
                                 <div class="alert alert-danger">
                                     {{ $message }}
@@ -39,7 +39,7 @@
                         </div>
                         <div class="form-group">
                             <label> {{ __('Order Number') }} </label>
-                            <input type="number" class="form-control" name="order" value="{{ $headerButton->order }}" placeholder="Enter header button order number">
+                            <input type="number" class="form-control" name="order" value="{{ $headerButton->order }}">
                             @error('order')
                                 <div class="alert alert-danger">
                                     {{ $message }}

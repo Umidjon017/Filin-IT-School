@@ -8,7 +8,7 @@
         <div class="card">
             <div class="row mb-2 mt-2">
                 <div class="card-header col-sm-6">
-                    <div class=" d-flex justify-content-center">
+                    <div class="d-flex justify-content-center">
                         <a href="{{ route('admin.training-program.index') }}"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Back') }} </button></a> &nbsp;
                         <a href="{{ route('admin.training-program.edit', $trainingProgram->id) }}"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square" aria-hidden="true"></i> {{ __('Edit') }} </button></a> &nbsp;
                         <form action="{{route('admin.training-program.destroy', $trainingProgram->id)}}" method="post">

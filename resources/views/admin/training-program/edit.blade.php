@@ -21,7 +21,7 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label> {{ __('Name') }} </label>
-                            <input type="text" class="form-control" name="name" value="{{ $trainingProgram->name }}" placeholder="Enter header button name">
+                            <input type="text" class="form-control" name="name" value="{{ $trainingProgram->name }}">
                             @error('name')
                                 <div class="alert alert-danger">
                                     {{ $message }}
@@ -30,7 +30,7 @@
                         </div>
                         <div class="form-group">
                             <label> {{ __('Order Number') }} </label>
-                            <input type="number" class="form-control" name="order" value="{{ $trainingProgram->order }}" placeholder="Enter header button order number">
+                            <input type="number" class="form-control" name="order" value="{{ $trainingProgram->order }}">
                             @error('order')
                                 <div class="alert alert-danger">
                                     {{ $message }}
