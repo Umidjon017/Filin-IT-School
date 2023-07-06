@@ -15,7 +15,7 @@
                     <h4>{{ __("Add Block Text One") }}</h4>
                 </div>
 
-                <form action="{{ route('admin.block-text-one.store') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('admin.block-text-one.store') }}" method="post">
                     @csrf
                     <div class="card-body">
                         <div class="form-group">

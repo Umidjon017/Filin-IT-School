@@ -1,7 +1,7 @@
 <x-admin-layout>
 
     <x-slot name="title">
-        {{ __('Block Text One') }}
+        {{ __('Block Text Two') }}
     </x-slot>
 
     <div class="row">
@@ -9,8 +9,8 @@
             <div class="card">
 
                 <div class="card-header d-flex justify-content-between mt-2">
-                    <h5>{{ __('Block Text One') }}</h5>
-                    <a class="btn btn-primary" href="{{ route('admin.block-text-one.create')}}"> {{ __('Add') }} </a>
+                    <h5>{{ __('Block Text Two') }}</h5>
+                    <a class="btn btn-primary" href="{{ route('admin.block-text-two.create')}}"> {{ __('Add') }} </a>
                 </div>
 
                 <div class="card-body">
@@ -39,19 +39,19 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($blockTextOne as $block)
+                            @foreach($blockTextTwo as $block)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $block->title }}</td>
                                     <td>{!! $block->body !!}</td>
                                     <td class="d-flex justify-content-center">
-                                        <a class="btn btn-primary" href="{{route('admin.block-text-one.show', $block->id)}}">
+                                        <a class="btn btn-primary" href="{{route('admin.block-text-two.show', $block->id)}}">
                                             <i class="fas fa-eye"></i>
                                         </a>
-                                        <a class="btn btn-warning ml-1" href="{{route('admin.block-text-one.edit', $block->id)}}">
+                                        <a class="btn btn-warning ml-1" href="{{route('admin.block-text-two.edit', $block->id)}}">
                                             <i class="fas fa-edit"></i>
                                         </a>
-                                        <form action="{{route('admin.block-text-one.destroy', $block->id)}}" method="post">
+                                        <form action="{{route('admin.block-text-two.destroy', $block->id)}}" method="post">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger ml-1">
@@ -69,7 +69,7 @@
                 <div class="card-footer text-right">
                     <nav class="d-inline-block">
                         <ul class="pagination mb-0">
-                            {!! $blockTextOne->links() !!}
+                            {!! $blockTextTwo->links() !!}
                         </ul>
                     </nav>
                 </div>
