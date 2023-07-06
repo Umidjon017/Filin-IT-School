@@ -42,7 +42,7 @@ class TrainingProgramController extends Controller
 
         $trainingProgram = TrainingProgram::create($data);
 
-        return redirect()->route('admin.training-program.index')->withSuccess($trainingProgram['name'] . ' - training program has successfully stored!');
+        return redirect()->route('admin.training-programs.index')->withSuccess($trainingProgram['name'] . ' - training program has successfully stored!');
     }
 
     /**
@@ -76,7 +76,7 @@ class TrainingProgramController extends Controller
 
         $trainingProgram->update($data);
 
-        return redirect()->route('admin.training-program.index')->withSuccess($trainingProgram['name'] . ' - training program has successfully updated!');
+        return redirect()->route('admin.training-programs.index')->withSuccess($trainingProgram['name'] . ' - training program has successfully updated!');
     }
 
     /**
@@ -85,7 +85,7 @@ class TrainingProgramController extends Controller
     public function destroy(TrainingProgram $trainingProgram)
     {
         $trainingProgram->delete();
-        return redirect()->route('admin.training-program.index')->withSuccess($trainingProgram['name'] . ' - training program has successfully deleted!');
+        return redirect()->route('admin.training-programs.index')->withSuccess($trainingProgram['name'] . ' - training program has successfully deleted!');
     }
 
     public function fileUpload($file): string

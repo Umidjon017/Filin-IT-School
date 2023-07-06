@@ -10,7 +10,7 @@
 
                 <div class="card-header d-flex justify-content-between mt-2">
                     <h5>{{ __('Header Buttons') }}</h5>
-                    <a class="btn btn-primary" href="{{ route('admin.header-button.create')}}"> {{ __('Add') }} </a>
+                    <a class="btn btn-primary" href="{{ route('admin.header-buttons.create')}}"> {{ __('Add') }} </a>
                 </div>
 
                 <div class="card-body">
@@ -55,13 +55,13 @@
                                         @endif
                                     </td>
                                     <td class="d-flex justify-content-center">
-                                        <a class="btn btn-primary" href="{{route('admin.header-button.show', $button->id)}}">
+                                        <a class="btn btn-primary" href="{{route('admin.header-buttons.show', $button->id)}}">
                                             <i class="fas fa-eye"></i>
                                         </a>
-                                        <a class="btn btn-warning ml-1" href="{{route('admin.header-button.edit', $button->id)}}">
+                                        <a class="btn btn-warning ml-1" href="{{route('admin.header-buttons.edit', $button->id)}}">
                                             <i class="fas fa-edit"></i>
                                         </a>
-                                        <form action="{{route('admin.header-button.destroy', $button->id)}}" method="post">
+                                        <form action="{{route('admin.header-buttons.destroy', $button->id)}}" method="post">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger ml-1">

@@ -8,14 +8,14 @@
         <div class="col-12 col-md-6 col-lg-6">
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
-                    <a href="{{ route('admin.footer-button.index') }}">
+                    <a href="{{ route('admin.footer-buttons.index') }}">
                         <button class="btn btn-danger"><i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Back') }} </button>
                     </a>
 
                     <h4>{{ __("Edit Footer Button") }}</h4>
                 </div>
 
-                <form action="{{ route('admin.footer-button.update', $footerButton->id) }}" method="post">
+                <form action="{{ route('admin.footer-buttons.update', $footerButton->id) }}" method="post">
                     @csrf
                     @method('PUT')
                     <div class="card-body">

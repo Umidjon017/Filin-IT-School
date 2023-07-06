@@ -1,7 +1,7 @@
 <x-admin-layout>
 
     <x-slot name="title">
-        {{ __('Footer Buttons') }}
+        {{ __('Banners') }}
     </x-slot>
 
     <div class="row">
@@ -9,8 +9,8 @@
             <div class="card">
 
                 <div class="card-header d-flex justify-content-between mt-2">
-                    <h5>{{ __('Footer Buttons') }}</h5>
-                    <a class="btn btn-primary" href="{{ route('admin.footer-buttons.create')}}"> {{ __('Add') }} </a>
+                    <h5>{{ __('Banners') }}</h5>
+                    <a class="btn btn-primary" href="{{ route('admin.banners.create')}}"> {{ __('Add') }} </a>
                 </div>
 
                 <div class="card-body">
@@ -33,35 +33,29 @@
                             <thead>
                             <tr>
                                 <th>{{ __('#') }}</th>
-                                <th>{{ __('Name') }}</th>
-                                <th>{{ __('Url') }}</th>
+                                <th>{{ __('Image') }}</th>
+                                <th>{{ __('title') }}</th>
+                                <th class="text-break">{{ __('Description') }}</th>
                                 <th>{{ __('Order') }}</th>
-                                <th>{{ __('Status') }}</th>
                                 <th class="text-center">{{ __('Action') }}</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($footerButtons as $button)
+                            @foreach($banners as $program)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $button->name }}</td>
-                                    <td class="text-break">{{ $button->url }}</td>
-                                    <td>{{ $button->order }}</td>
-                                    <td>
-                                        @if($button->status == 1)
-                                            <div class="badge badge-success"> {{ __('Active') }} </div>
-                                        @else
-                                            <div class="badge badge-danger"> {{ __('Inactive') }} </div>
-                                        @endif
-                                    </td>
+                                    <td><img src="/admin/images/banners/{{ $program->image }}" width="100px"></td>
+                                    <td>{{ $program->title }}</td>
+                                    <td>{{ $program->description }}</td>
+                                    <td>{{ $program->order }}</td>
                                     <td class="d-flex justify-content-center">
-                                        <a class="btn btn-primary" href="{{route('admin.footer-buttons.show', $button->id)}}">
+                                        <a class="btn btn-primary" href="{{route('admin.banners.show', $program->id)}}">
                                             <i class="fas fa-eye"></i>
                                         </a>
-                                        <a class="btn btn-warning ml-1" href="{{route('admin.footer-buttons.edit', $button->id)}}">
+                                        <a class="btn btn-warning ml-1" href="{{route('admin.banners.edit', $program->id)}}">
                                             <i class="fas fa-edit"></i>
                                         </a>
-                                        <form action="{{route('admin.footer-buttons.destroy', $button->id)}}" method="post">
+                                        <form action="{{route('admin.banners.destroy', $program->id)}}" method="post">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger ml-1">
@@ -79,7 +73,7 @@
                 <div class="card-footer text-right">
                     <nav class="d-inline-block">
                         <ul class="pagination mb-0">
-                            {!! $footerButtons->links() !!}
+                            {!! $banners->links() !!}
                         </ul>
                     </nav>
                 </div>

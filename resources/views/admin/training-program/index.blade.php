@@ -10,7 +10,7 @@
 
                 <div class="card-header d-flex justify-content-between mt-2">
                     <h5>{{ __('Training Programs') }}</h5>
-                    <a class="btn btn-primary" href="{{ route('admin.training-program.create')}}"> {{ __('Add') }} </a>
+                    <a class="btn btn-primary" href="{{ route('admin.training-programs.create')}}"> {{ __('Add') }} </a>
                 </div>
 
                 <div class="card-body">
@@ -44,7 +44,7 @@
                             @foreach($trainingPrograms as $program)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td><img src="/admin/images/training-program/{{ $program->icon }}" width="100px"></td>
+                                    <td><img src="/admin/images/training-programs/{{ $program->icon }}" width="100px"></td>
                                     <td>{{ $program->name }}</td>
                                     <td>{{ $program->order }}</td>
                                     <td>
@@ -55,13 +55,13 @@
                                         @endif
                                     </td>
                                     <td class="d-flex justify-content-center">
-                                        <a class="btn btn-primary" href="{{route('admin.training-program.show', $program->id)}}">
+                                        <a class="btn btn-primary" href="{{route('admin.training-programs.show', $program->id)}}">
                                             <i class="fas fa-eye"></i>
                                         </a>
-                                        <a class="btn btn-warning ml-1" href="{{route('admin.training-program.edit', $program->id)}}">
+                                        <a class="btn btn-warning ml-1" href="{{route('admin.training-programs.edit', $program->id)}}">
                                             <i class="fas fa-edit"></i>
                                         </a>
-                                        <form action="{{route('admin.training-program.destroy', $program->id)}}" method="post">
+                                        <form action="{{route('admin.training-programs.destroy', $program->id)}}" method="post">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger ml-1">

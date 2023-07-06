@@ -11,17 +11,20 @@
             <li class="dropdown {{ request()->routeIs('admin.dashboard*') ? 'active' : ''  }}">
                 <a href="{{ route('admin.dashboard') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Dashboard") }}</span></a>
             </li>
-            <li class="dropdown {{ request()->routeIs('admin.header-button*') ? 'active' : ''  }}">
-                <a href="{{ route('admin.header-button.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Header Buttons") }}</span></a>
+            <li class="dropdown {{ request()->routeIs('admin.header-buttons*') ? 'active' : ''  }}">
+                <a href="{{ route('admin.header-buttons.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Header Buttons") }}</span></a>
             </li>
-            <li class="dropdown {{ request()->routeIs('admin.footer-button*') ? 'active' : ''  }}">
-                <a href="{{ route('admin.footer-button.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Footer Buttons") }}</span></a>
+            <li class="dropdown {{ request()->routeIs('admin.footer-buttons*') ? 'active' : ''  }}">
+                <a href="{{ route('admin.footer-buttons.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Footer Buttons") }}</span></a>
             </li>
-            <li class="dropdown {{ request()->routeIs('admin.training-program*') ? 'active' : ''  }}">
-                <a href="{{ route('admin.training-program.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Training Programs") }}</span></a>
+            <li class="dropdown {{ request()->routeIs('admin.training-programs*') ? 'active' : ''  }}">
+                <a href="{{ route('admin.training-programs.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Training Programs") }}</span></a>
             </li>
             <li class="dropdown {{ request()->routeIs('admin.telephone-address*') ? 'active' : ''  }}">
                 <a href="{{ route('admin.telephone-address.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Telephone Address") }}</span></a>
+            </li>
+            <li class="dropdown {{ request()->routeIs('admin.banners*') ? 'active' : ''  }}">
+                <a href="{{ route('admin.banners.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Banners") }}</span></a>
             </li>
 
             {{-- @can('product-list') --}}

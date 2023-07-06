@@ -8,14 +8,14 @@
         <div class="col-12 col-md-6 col-lg-6">
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
-                    <a href="{{ route('admin.header-button.index') }}">
+                    <a href="{{ route('admin.header-buttons.index') }}">
                         <button class="btn btn-danger"><i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Back') }} </button>
                     </a>
 
                     <h4>{{ __("Add Header Button") }}</h4>
                 </div>
 
-                <form action="{{ route('admin.header-button.store') }}" method="post">
+                <form action="{{ route('admin.header-buttons.store') }}" method="post">
                     @csrf
                     <div class="card-body">
                         <div class="form-group">

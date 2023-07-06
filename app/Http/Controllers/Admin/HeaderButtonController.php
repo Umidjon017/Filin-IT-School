@@ -39,7 +39,7 @@ class HeaderButtonController extends Controller
 
         $headerButtons = HeaderButton::create($data);
 
-        return redirect()->route('admin.header-button.index')->withSuccess($headerButtons['name'] . ' - header button has successfully stored!');
+        return redirect()->route('admin.header-buttons.index')->withSuccess($headerButtons['name'] . ' - header button has successfully stored!');
     }
 
     /**
@@ -69,7 +69,7 @@ class HeaderButtonController extends Controller
 
         $headerButton->update($data);
 
-        return redirect()->route('admin.header-button.index')->withSuccess($headerButton['name'] . ' - header button has successfully updated!');
+        return redirect()->route('admin.header-buttons.index')->withSuccess($headerButton['name'] . ' - header button has successfully updated!');
     }
 
     /**
@@ -78,6 +78,6 @@ class HeaderButtonController extends Controller
     public function destroy(HeaderButton $headerButton)
     {
         $headerButton->delete();
-        return redirect()->route('admin.header-button.index')->withSuccess($headerButton['name'] . ' - header button has successfully deleted!');
+        return redirect()->route('admin.header-buttons.index')->withSuccess($headerButton['name'] . ' - header button has successfully deleted!');
     }
 }

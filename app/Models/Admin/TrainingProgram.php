@@ -9,7 +9,7 @@ class TrainingProgram extends Model
 {
     use HasFactory;
 
-    const FILE_PATH = 'admin/images/training-program/';
+    const FILE_PATH = 'admin/images/training-programs/';
 
     protected $fillable = ['icon', 'name', 'status', 'order'];
 

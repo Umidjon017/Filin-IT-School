@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\FooterButtonController;
 use App\Http\Controllers\Admin\HeaderButtonController;
@@ -27,13 +28,15 @@ Route::prefix('/admin')->name('admin.')->middleware(['auth', 'verified'])->group
     // Dashboard
     Route::get('/dashboard', [DashboardController::class, 'index'] )->name('dashboard');
     // Header-buttons
-    Route::resource('/header-button', HeaderButtonController::class);
+    Route::resource('/header-buttons', HeaderButtonController::class);
     // Footer-buttons
-    Route::resource('/footer-button', FooterButtonController::class);
+    Route::resource('/footer-buttons', FooterButtonController::class);
     // Training-programs
-    Route::resource('/training-program', TrainingProgramController::class);
+    Route::resource('/training-programs', TrainingProgramController::class);
     // Telephone-address
     Route::resource('/telephone-address', TelephoneAddressController::class);
+    // Banners
+    Route::resource('/banners', BannerController::class);
 });
 
 Route::middleware('auth')->group(function () {

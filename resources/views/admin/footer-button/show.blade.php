@@ -9,9 +9,9 @@
             <div class="row mb-2 mt-2">
                 <div class="card-header col-sm-6">
                     <div class="d-flex justify-content-center">
-                        <a href="{{ route('admin.footer-button.index') }}"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Back') }} </button></a> &nbsp;
-                        <a href="{{ route('admin.footer-button.edit', $footerButton->id) }}"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square" aria-hidden="true"></i> {{ __('Edit') }} </button></a> &nbsp;
-                        <form action="{{route('admin.footer-button.destroy', $footerButton->id)}}" method="post">
+                        <a href="{{ route('admin.footer-buttons.index') }}"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Back') }} </button></a> &nbsp;
+                        <a href="{{ route('admin.footer-buttons.edit', $footerButton->id) }}"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square" aria-hidden="true"></i> {{ __('Edit') }} </button></a> &nbsp;
+                        <form action="{{route('admin.footer-buttons.destroy', $footerButton->id)}}" method="post">
                             @csrf
                             @method('DELETE')
                             <button  style="display: inline" type="submit" class="btn btn-danger btn-sm">

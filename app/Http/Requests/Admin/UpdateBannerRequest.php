@@ -4,7 +4,7 @@ namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateTrainingProgramRequest extends FormRequest
+class UpdateBannerRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,16 +22,16 @@ class UpdateTrainingProgramRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required',
-            'order' => 'required',
+            'title' => 'required',
+            'description' => 'required',
         ];
     }
 
     public function messages(): array
     {
         return [
-            'name.required' => 'The name must be entered',
-            'order.required'  => 'The order number must be entered',
+            'title.required' => 'The title must be entered',
+            'description.required'  => 'The description must be entered',
         ];
     }
 }

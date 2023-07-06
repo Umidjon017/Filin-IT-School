@@ -8,14 +8,14 @@
         <div class="col-12 col-md-6 col-lg-6">
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
-                    <a href="{{ route('admin.training-program.index') }}">
+                    <a href="{{ route('admin.training-programs.index') }}">
                         <button class="btn btn-danger"><i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Back') }} </button>
                     </a>
 
                     <h4>{{ __("Add Training Programs") }}</h4>
                 </div>
 
-                <form action="{{ route('admin.training-program.store') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('admin.training-programs.store') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="card-body">
                         <div class="form-group">
