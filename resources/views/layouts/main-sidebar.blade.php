@@ -11,26 +11,42 @@
             <li class="dropdown {{ request()->routeIs('admin.dashboard*') ? 'active' : ''  }}">
                 <a href="{{ route('admin.dashboard') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Dashboard") }}</span></a>
             </li>
+
             <li class="dropdown {{ request()->routeIs('admin.header-buttons*') ? 'active' : ''  }}">
                 <a href="{{ route('admin.header-buttons.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Header Buttons") }}</span></a>
             </li>
+
             <li class="dropdown {{ request()->routeIs('admin.footer-buttons*') ? 'active' : ''  }}">
                 <a href="{{ route('admin.footer-buttons.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Footer Buttons") }}</span></a>
             </li>
+
             <li class="dropdown {{ request()->routeIs('admin.training-programs*') ? 'active' : ''  }}">
                 <a href="{{ route('admin.training-programs.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Training Programs") }}</span></a>
             </li>
+
             <li class="dropdown {{ request()->routeIs('admin.telephone-address*') ? 'active' : ''  }}">
                 <a href="{{ route('admin.telephone-address.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Telephone Address") }}</span></a>
             </li>
+
             <li class="dropdown {{ request()->routeIs('admin.banners*') ? 'active' : ''  }}">
                 <a href="{{ route('admin.banners.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Banners") }}</span></a>
             </li>
-            <li class="dropdown {{ request()->routeIs('admin.block-text-one*') ? 'active' : ''  }}">
-                <a href="{{ route('admin.block-text-one.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Block Text One") }}</span></a>
+
+            <li class="dropdown {{ request()->routeIs('admin.block-text*') ? 'active' : ''  }}">
+                <a href="#" class="menu-toggle nav-link has-dropdown" ><i class="fas fa-list-alt"></i><span>{{ __("Block Texts") }}</span></a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown {{ request()->routeIs('admin.block-text-one*') ? 'active' : ''  }}">
+                        <a href="{{ route('admin.block-text-one.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Block Text One") }}</span></a>
+                    </li>
+
+                    <li class="dropdown {{ request()->routeIs('admin.block-text-two*') ? 'active' : ''  }}">
+                        <a href="{{ route('admin.block-text-two.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Block Text Two") }}</span></a>
+                    </li>
+                </ul>
             </li>
-            <li class="dropdown {{ request()->routeIs('admin.block-text-two*') ? 'active' : ''  }}">
-                <a href="{{ route('admin.block-text-two.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Block Text Two") }}</span></a>
+
+            <li class="dropdown {{ request()->routeIs('admin.school-results*') ? 'active' : ''  }}">
+                <a href="{{ route('admin.school-results.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("School Results") }}</span></a>
             </li>
 
             {{-- @can('product-list') --}}

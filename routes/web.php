@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\BlockTextTwoController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\FooterButtonController;
 use App\Http\Controllers\Admin\HeaderButtonController;
+use App\Http\Controllers\Admin\SchoolResultController;
 use App\Http\Controllers\Admin\TelephoneAddressController;
 use App\Http\Controllers\Admin\TrainingProgramController;
 use App\Http\Controllers\ProfileController;
@@ -43,6 +44,8 @@ Route::prefix('/admin')->name('admin.')->middleware(['auth', 'verified'])->group
     Route::resource('/block-text-one', BlockTextOneController::class);
     // Block-text-two
     Route::resource('/block-text-two', BlockTextTwoController::class);
+    // School-results
+    Route::resource('/school-results', SchoolResultController::class);
 });
 
 Route::middleware('auth')->group(function () {
