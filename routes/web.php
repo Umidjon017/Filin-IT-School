@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\BannerController;
+use App\Http\Controllers\Admin\BlockTextOneController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\FooterButtonController;
 use App\Http\Controllers\Admin\HeaderButtonController;
@@ -37,6 +38,8 @@ Route::prefix('/admin')->name('admin.')->middleware(['auth', 'verified'])->group
     Route::resource('/telephone-address', TelephoneAddressController::class);
     // Banners
     Route::resource('/banners', BannerController::class);
+    // Block-text-one
+    Route::resource('/block-text-one', BlockTextOneController::class);
 });
 
 Route::middleware('auth')->group(function () {

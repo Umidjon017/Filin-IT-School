@@ -1,7 +1,7 @@
 <x-admin-layout>
 
     <x-slot name="title">
-        {{ __('Banners') }}
+        {{ __('Block Text One') }}
     </x-slot>
 
     <div class="row">
@@ -9,8 +9,8 @@
             <div class="card">
 
                 <div class="card-header d-flex justify-content-between mt-2">
-                    <h5>{{ __('Banners') }}</h5>
-                    <a class="btn btn-primary" href="{{ route('admin.banners.create')}}"> {{ __('Add') }} </a>
+                    <h5>{{ __('Block Text One') }}</h5>
+                    <a class="btn btn-primary" href="{{ route('admin.block-text-one.create')}}"> {{ __('Add') }} </a>
                 </div>
 
                 <div class="card-body">
@@ -33,29 +33,25 @@
                             <thead>
                             <tr>
                                 <th>{{ __('#') }}</th>
-                                <th>{{ __('Image') }}</th>
                                 <th>{{ __('Title') }}</th>
-                                <th class="text-break">{{ __('Description') }}</th>
-                                <th>{{ __('Order') }}</th>
+                                <th class="text-break">{{ __('Body') }}</th>
                                 <th class="text-center">{{ __('Action') }}</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($banners as $program)
+                            @foreach($blockTextOne as $block)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td><img src="/admin/images/banners/{{ $program->image }}" width="100px"></td>
-                                    <td>{{ $program->title }}</td>
-                                    <td>{{ $program->description }}</td>
-                                    <td>{{ $program->order }}</td>
+                                    <td>{{ $block->title }}</td>
+                                    <td>{{ $block->body }}</td>
                                     <td class="d-flex justify-content-center">
-                                        <a class="btn btn-primary" href="{{route('admin.banners.show', $program->id)}}">
+                                        <a class="btn btn-primary" href="{{route('admin.block-text-one.show', $block->id)}}">
                                             <i class="fas fa-eye"></i>
                                         </a>
-                                        <a class="btn btn-warning ml-1" href="{{route('admin.banners.edit', $program->id)}}">
+                                        <a class="btn btn-warning ml-1" href="{{route('admin.block-text-one.edit', $block->id)}}">
                                             <i class="fas fa-edit"></i>
                                         </a>
-                                        <form action="{{route('admin.banners.destroy', $program->id)}}" method="post">
+                                        <form action="{{route('admin.block-text-one.destroy', $block->id)}}" method="post">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger ml-1">
@@ -73,7 +69,7 @@
                 <div class="card-footer text-right">
                     <nav class="d-inline-block">
                         <ul class="pagination mb-0">
-                            {!! $banners->links() !!}
+                            {!! $blockTextOne->links() !!}
                         </ul>
                     </nav>
                 </div>

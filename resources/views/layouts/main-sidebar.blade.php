@@ -26,6 +26,9 @@
             <li class="dropdown {{ request()->routeIs('admin.banners*') ? 'active' : ''  }}">
                 <a href="{{ route('admin.banners.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Banners") }}</span></a>
             </li>
+            <li class="dropdown {{ request()->routeIs('admin.block-text-one*') ? 'active' : ''  }}">
+                <a href="{{ route('admin.block-text-one.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Block Text One") }}</span></a>
+            </li>
 
             {{-- @can('product-list') --}}
             {{-- <li class="dropdown {{ request()->is('admin/product-categories/*') ? 'active' : ''  }}">

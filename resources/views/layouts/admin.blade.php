@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ asset("/assets/css/app.min.css") }}">
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset("/assets/css/style.css") }}">
+    <link rel="stylesheet" href="{{ asset("/assets/bundles/summernote/summernote-bs4.css") }}">
     @yield('css')
     <!-- Custom style CSS -->
     <link rel="stylesheet" href="{{ asset("/assets/css/custom.css") }}">
@@ -50,6 +51,7 @@
     <script src="{{ asset('assets/js/app.min.js') }}"></script>
     <!-- JS Libraries -->
     <script src="{{ asset('assets/bundles/apexcharts/apexcharts.min.js') }}"></script>
+    <script src="{{ asset('assets/bundles/summernote/summernote-bs4.js') }}"></script>
     <!-- Page Specific JS File -->
     <script src="{{ asset('assets/js/page/index.js') }}"></script>
     <!-- Template JS File -->
