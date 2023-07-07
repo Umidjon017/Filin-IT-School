@@ -37,7 +37,7 @@ class BlockTextOneController extends Controller
 
         $blockTextOne = BlockTextOne::create($data);
 
-        return redirect()->route('admin.block-text-one.index')->withSuccess('Block text one has successfully stored!');
+        return redirect()->route('admin.block-text-one.index')->withSuccess('Успешно создано !');
     }
 
     /**
@@ -65,7 +65,7 @@ class BlockTextOneController extends Controller
 
         $blockTextOne->update($data);
 
-        return redirect()->route('admin.block-text-one.index')->withSuccess('Block text one has successfully updated!');
+        return redirect()->route('admin.block-text-one.index')->withSuccess('Успешно обновлено !');
     }
 
     /**

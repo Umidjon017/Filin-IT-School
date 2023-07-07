@@ -2,55 +2,55 @@
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
             <a href="{{ route('admin.dashboard') }}">
-                <img alt="image" src="{{ asset('/assets/img/logo.png') }}" class="header-logo" />
-                <span class="logo-name">{{ __("Project-Name") }}</span>
+                <img alt="image" src="{{ asset('front/assets/img/logo/logo_nav.png') }}" class="header-logo" />
+                <span class="logo-name">{{ __("ФИЛИН IT") }}</span>
             </a>
         </div>
         <ul class="sidebar-menu">
-            <li class="menu-header">{{ __("Main") }}</li>
+           
             <li class="dropdown {{ request()->routeIs('admin.dashboard*') ? 'active' : ''  }}">
-                <a href="{{ route('admin.dashboard') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Dashboard") }}</span></a>
+                <a href="{{ route('admin.dashboard') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Главная") }}</span></a>
             </li>
 
             <li class="dropdown {{ request()->routeIs('admin.header-buttons*') ? 'active' : ''  }}">
-                <a href="{{ route('admin.header-buttons.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Header Buttons") }}</span></a>
+                <a href="{{ route('admin.header-buttons.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Кнопки в хедере") }}</span></a>
             </li>
 
             <li class="dropdown {{ request()->routeIs('admin.footer-buttons*') ? 'active' : ''  }}">
-                <a href="{{ route('admin.footer-buttons.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Footer Buttons") }}</span></a>
+                <a href="{{ route('admin.footer-buttons.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Кнопки в футере") }}</span></a>
             </li>
 
             <li class="dropdown {{ request()->routeIs('admin.training-programs*') ? 'active' : ''  }}">
-                <a href="{{ route('admin.training-programs.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Training Programs") }}</span></a>
+                <a href="{{ route('admin.training-programs.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Программы обучения") }}</span></a>
             </li>
 
             <li class="dropdown {{ request()->routeIs('admin.telephone-address*') ? 'active' : ''  }}">
-                <a href="{{ route('admin.telephone-address.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Telephone Address") }}</span></a>
+                <a href="{{ route('admin.telephone-address.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Телефон и Адрес") }}</span></a>
             </li>
 
             <li class="dropdown {{ request()->routeIs('admin.banners*') ? 'active' : ''  }}">
-                <a href="{{ route('admin.banners.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Banners") }}</span></a>
+                <a href="{{ route('admin.banners.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Баннер") }}</span></a>
             </li>
 
             <li class="dropdown {{ request()->routeIs('admin.block-text*') ? 'active' : ''  }}">
-                <a href="#" class="menu-toggle nav-link has-dropdown" ><i class="fas fa-list-alt"></i><span>{{ __("Block Texts") }}</span></a>
+                <a href="#" class="menu-toggle nav-link has-dropdown" ><i class="fas fa-list-alt"></i><span>{{ __("Блоки") }}</span></a>
                 <ul class="dropdown-menu">
                     <li class="dropdown {{ request()->routeIs('admin.block-text-one*') ? 'active' : ''  }}">
-                        <a href="{{ route('admin.block-text-one.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Block Text One") }}</span></a>
+                        <a href="{{ route('admin.block-text-one.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Блок после баннера") }}</span></a>
                     </li>
 
                     <li class="dropdown {{ request()->routeIs('admin.block-text-two*') ? 'active' : ''  }}">
-                        <a href="{{ route('admin.block-text-two.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Block Text Two") }}</span></a>
+                        <a href="{{ route('admin.block-text-two.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Блок 'Наша миссия'") }}</span></a>
                     </li>
                 </ul>
             </li>
 
             <li class="dropdown {{ request()->routeIs('admin.school-results*') ? 'active' : ''  }}">
-                <a href="{{ route('admin.school-results.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("School Results") }}</span></a>
+                <a href="{{ route('admin.school-results.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Результаты университета") }}</span></a>
             </li>
 
             <li class="dropdown {{ request()->routeIs('admin.pages*') ? 'active' : ''  }}">
-                <a href="{{ route('admin.pages.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Pages") }}</span></a>
+                <a href="{{ route('admin.pages.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Страницы") }}</span></a>
             </li>
 
             {{-- @can('product-list') --}}

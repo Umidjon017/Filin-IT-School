@@ -9,8 +9,8 @@
             <div class="card">
 
                 <div class="card-header d-flex justify-content-between mt-2">
-                    <h5>{{ __('Footer Buttons') }}</h5>
-                    <a class="btn btn-primary" href="{{ route('admin.footer-buttons.create')}}"> {{ __('Add') }} </a>
+                    <h5>{{ __('Кнопки (Footer)') }}</h5>
+                    <a class="btn btn-primary" href="{{ route('admin.footer-buttons.create')}}"> {{ __('Добавить') }} </a>
                 </div>
 
                 <div class="card-body">
@@ -33,11 +33,11 @@
                             <thead>
                             <tr>
                                 <th>{{ __('#') }}</th>
-                                <th>{{ __('Name') }}</th>
-                                <th>{{ __('Url') }}</th>
-                                <th>{{ __('Order') }}</th>
-                                <th>{{ __('Status') }}</th>
-                                <th class="text-center">{{ __('Action') }}</th>
+                                <th>{{ __('Текст') }}</th>
+                                <th>{{ __('Ссылка') }}</th>
+                                <th>{{ __('Порядковый номер') }}</th>
+                                <th>{{ __('Статус') }}</th>
+                                <th class="text-center">{{ __('Дейстия') }}</th>
                             </tr>
                             </thead>
                             <tbody>

@@ -9,9 +9,9 @@
             <div class="card">
 
                 <div class="card-header d-flex justify-content-between mt-2">
-                    <h5>{{ __('Telephone Addresses') }}</h5>
+                    <h5>{{ __('Телефон и адрес') }}</h5>
                     @if($telephoneAddress->isEmpty())
-                        <a class="btn btn-primary" href="{{ route('admin.telephone-address.create')}}"> {{ __('Add') }} </a>
+                        <a class="btn btn-primary" href="{{ route('admin.telephone-address.create')}}"> {{ __('Добавить') }} </a>
                     @else
                         <a href=""></a>
                     @endif
@@ -37,10 +37,10 @@
                             <thead>
                             <tr>
                                 <th>{{ __('#') }}</th>
-                                <th>{{ __('Telephone') }}</th>
-                                <th>{{ __('Address') }}</th>
-                                <th>{{ __('Created At') }}</th>
-                                <th class="text-center">{{ __('Action') }}</th>
+                                <th>{{ __('Телефон') }}</th>
+                                <th>{{ __('Адрес') }}</th>
+                             
+                                <th class="text-center">{{ __('Действия') }}</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -49,7 +49,7 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $telAddress->telephone }}</td>
                                     <td>{{ $telAddress->address }}</td>
-                                    <td>{{ $telAddress->created_at }}</td>
+                                  
                                     <td class="d-flex justify-content-center">
 {{--                                        <a class="btn btn-primary" href="{{route('admin.telephone-address.show', $telAddress->id)}}">--}}
 {{--                                            <i class="fas fa-eye"></i>--}}

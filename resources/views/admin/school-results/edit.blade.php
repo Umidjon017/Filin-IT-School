@@ -12,7 +12,7 @@
                         <button class="btn btn-danger"><i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Back') }} </button>
                     </a>
 
-                    <h4>{{ __("Edit School Results") }}</h4>
+                    <h4>{{ __("Изменить") }}</h4>
                 </div>
 
                 <form action="{{ route('admin.school-results.update', $schoolResult->id) }}" method="post" enctype="multipart/form-data">
@@ -20,7 +20,7 @@
                     @method('PUT')
                     <div class="card-body">
                         <div class="form-group">
-                            <label> {{ __('Title') }} </label>
+                            <label> {{ __('Заголовок') }} </label>
                             <input type="text" class="form-control" name="title" value="{{ $schoolResult->title }}">
                             @error('title')
                                 <div class="alert alert-danger">
@@ -29,7 +29,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label> {{ __('Description') }} </label>
+                            <label> {{ __('Текст') }} </label>
                             <textarea class="summernote" name="description"> {{ $schoolResult->description }} </textarea>
                             @error('description')
                                 <div class="alert alert-danger">
@@ -60,7 +60,7 @@
                     </div>
 
                     <div class="card-footer text-right">
-                        <button class="btn btn-primary mr-1" type="submit">{{ __('Save') }}</button>
+                        <button class="btn btn-primary mr-1" type="submit">{{ __('Сохранить') }}</button>
                     </div>
                 </form>
             </div>

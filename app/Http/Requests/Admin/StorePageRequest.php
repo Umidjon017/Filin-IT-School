@@ -23,7 +23,7 @@ class StorePageRequest extends FormRequest
     {
         return [
             'title' => 'required',
-            'description' => 'required',
+            // 'description' => 'required',
             'body' => 'required',
             'url' => 'required',
         ];

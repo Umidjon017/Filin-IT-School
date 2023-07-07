@@ -37,7 +37,7 @@ class PageController extends Controller
 
         $page = Page::create($data);
 
-        return redirect()->route('admin.pages.index')->withSuccess($page['title'] . ' - page has successfully stored!');
+        return redirect()->route('admin.pages.index')->withSuccess('Успешно создано !');
     }
 
     /**
@@ -65,7 +65,7 @@ class PageController extends Controller
 
         $page->update($data);
 
-        return redirect()->route('admin.pages.index')->withSuccess($page['title'] . ' - page has successfully updated!');
+        return redirect()->route('admin.pages.index')->withSuccess('Успешно обновлено !');
     }
 
     /**

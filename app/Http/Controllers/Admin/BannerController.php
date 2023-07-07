@@ -41,7 +41,7 @@ class BannerController extends Controller
 
         $banner = Banner::create($data);
 
-        return redirect()->route('admin.banners.index')->withSuccess($banner['title'] . ' - banner has successfully stored!');
+        return redirect()->route('admin.banners.index')->withSuccess('Успешно создано !');
     }
 
     /**
@@ -74,7 +74,7 @@ class BannerController extends Controller
 
         $banner->update($data);
 
-        return redirect()->route('admin.banners.index')->withSuccess($banner['title'] . ' - banner has successfully updated!');
+        return redirect()->route('admin.banners.index')->withSuccess('Успешно обновлено !');
     }
 
     /**

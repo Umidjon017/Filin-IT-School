@@ -9,8 +9,8 @@
             <div class="card">
 
                 <div class="card-header d-flex justify-content-between mt-2">
-                    <h5>{{ __('School Results') }}</h5>
-                    <a class="btn btn-primary" href="{{ route('admin.school-results.create')}}"> {{ __('Add') }} </a>
+                    <h5>{{ __('Результаты университета') }}</h5>
+                    <a class="btn btn-primary" href="{{ route('admin.school-results.create')}}"> {{ __('Добавить') }} </a>
                 </div>
 
                 <div class="card-body">
@@ -34,9 +34,9 @@
                             <tr>
                                 <th>{{ __('#') }}</th>
                                 <th>{{ __('Icon') }}</th>
-                                <th>{{ __('Title') }}</th>
-                                <th>{{ __('Description') }}</th>
-                                <th class="text-center">{{ __('Action') }}</th>
+                                <th>{{ __('Заголовок') }}</th>
+                                <th>{{ __('Текст') }}</th>
+                                <th class="text-center">{{ __('Действия') }}</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -47,9 +47,9 @@
                                     <td class="text-break">{{ $result->title }}</td>
                                     <td class="text-break">{!! $result->description !!}</td>
                                     <td class="d-flex justify-content-center">
-                                        <a class="btn btn-primary" href="{{route('admin.school-results.show', $result->id)}}">
+                                        {{-- <a class="btn btn-primary" href="{{route('admin.school-results.show', $result->id)}}">
                                             <i class="fas fa-eye"></i>
-                                        </a>
+                                        </a> --}}
                                         <a class="btn btn-warning ml-1" href="{{route('admin.school-results.edit', $result->id)}}">
                                             <i class="fas fa-edit"></i>
                                         </a>

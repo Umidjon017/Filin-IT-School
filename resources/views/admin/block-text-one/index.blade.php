@@ -9,11 +9,9 @@
             <div class="card">
 
                 <div class="card-header d-flex justify-content-between mt-2">
-                    <h5>{{ __('Block Text One') }}</h5>
+                    <h5>{{ __('Блок после баннера') }}</h5>
                     @if($blockTextOne->isEmpty())
-                        <a class="btn btn-primary" href="{{ route('admin.block-text-one.create')}}"> {{ __('Add') }} </a>
-                    @else
-                        <a href=""></a>
+                        <a class="btn btn-primary" href="{{ route('admin.block-text-one.create')}}"> {{ __('Добавить') }} </a>
                     @endif
                 </div>
 
@@ -37,21 +35,21 @@
                             <thead>
                             <tr>
                                 <th>{{ __('#') }}</th>
-                                <th>{{ __('Title') }}</th>
+                                {{-- <th>{{ __('Заголовок') }}</th> --}}
                                 <th>{{ __('Body') }}</th>
-                                <th class="text-center">{{ __('Action') }}</th>
+                                <th class="text-center">{{ __('Действия') }}</th>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach($blockTextOne as $block)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td class="text-break">{{ $block->title }}</td>
+                                    {{-- <td class="text-break">{{ $block->title }}</td> --}}
                                     <td class="text-break">{!! $block->body !!}</td>
                                     <td class="d-flex justify-content-center">
-                                        <a class="btn btn-primary" href="{{route('admin.block-text-one.show', $block->id)}}">
+                                        {{-- <a class="btn btn-primary" href="{{route('admin.block-text-one.show', $block->id)}}">
                                             <i class="fas fa-eye"></i>
-                                        </a>
+                                        </a> --}}
                                         <a class="btn btn-warning ml-1" href="{{route('admin.block-text-one.edit', $block->id)}}">
                                             <i class="fas fa-edit"></i>
                                         </a>

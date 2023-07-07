@@ -42,7 +42,7 @@ class TrainingProgramController extends Controller
 
         $trainingProgram = TrainingProgram::create($data);
 
-        return redirect()->route('admin.training-programs.index')->withSuccess($trainingProgram['name'] . ' - training program has successfully stored!');
+        return redirect()->route('admin.training-programs.index')->withSuccess('Успешно создано !');
     }
 
     /**
@@ -76,7 +76,7 @@ class TrainingProgramController extends Controller
 
         $trainingProgram->update($data);
 
-        return redirect()->route('admin.training-programs.index')->withSuccess($trainingProgram['name'] . ' - training program has successfully updated!');
+        return redirect()->route('admin.training-programs.index')->withSuccess('Успешно обновлено !');
     }
 
     /**

@@ -41,7 +41,7 @@ class SchoolResultController extends Controller
 
         $schoolResult = SchoolResult::create($data);
 
-        return redirect()->route('admin.school-results.index')->withSuccess($schoolResult['title'] . ' - result has successfully stored!');
+        return redirect()->route('admin.school-results.index')->withSuccess('Успешно создано !');
     }
 
     /**
@@ -74,7 +74,7 @@ class SchoolResultController extends Controller
 
         $schoolResult->update($data);
 
-        return redirect()->route('admin.school-results.index')->withSuccess($schoolResult['title'] . ' - result has successfully updated!');
+        return redirect()->route('admin.school-results.index')->withSuccess('Успешно обновлено !');
     }
 
     /**

@@ -37,7 +37,7 @@ class BlockTextTwoController extends Controller
 
         $blockTextTwo = BlockTextTwo::create($data);
 
-        return redirect()->route('admin.block-text-two.index')->withSuccess('Block text two has successfully stored!');
+        return redirect()->route('admin.block-text-two.index')->withSuccess('Успешно создано !');
     }
 
     /**
@@ -65,7 +65,7 @@ class BlockTextTwoController extends Controller
 
         $blockTextTwo->update($data);
 
-        return redirect()->route('admin.block-text-two.index')->withSuccess('Block text two has successfully updated!');
+        return redirect()->route('admin.block-text-two.index')->withSuccess('Успешно обновлено !');
     }
 
     /**

@@ -9,8 +9,8 @@
             <div class="card">
 
                 <div class="card-header d-flex justify-content-between mt-2">
-                    <h5>{{ __('Training Programs') }}</h5>
-                    <a class="btn btn-primary" href="{{ route('admin.training-programs.create') }}"> {{ __('Add') }} </a>
+                    <h5>{{ __('Программы обучения') }}</h5>
+                    <a class="btn btn-primary" href="{{ route('admin.training-programs.create') }}"> {{ __('Добавить') }} </a>
                 </div>
 
                 <div class="card-body">
@@ -33,11 +33,11 @@
                             <thead>
                             <tr>
                                 <th>{{ __('#') }}</th>
-                                <th>{{ __('Icon') }}</th>
-                                <th>{{ __('Name') }}</th>
-                                <th>{{ __('Order') }}</th>
-                                <th>{{ __('Status') }}</th>
-                                <th class="text-center">{{ __('Action') }}</th>
+                                <th>{{ __('Иконка') }}</th>
+                                <th>{{ __('Наввание') }}</th>
+                                <th>{{ __('Порядковый номер') }}</th>
+                                <th>{{ __('Статус') }}</th>
+                                <th class="text-center">{{ __('Действия') }}</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -55,9 +55,9 @@
                                         @endif
                                     </td>
                                     <td class="d-flex justify-content-center">
-                                        <a class="btn btn-primary" href="{{route('admin.training-programs.show', $program->id)}}">
+                                        {{-- <a class="btn btn-primary" href="{{route('admin.training-programs.show', $program->id)}}">
                                             <i class="fas fa-eye"></i>
-                                        </a>
+                                        </a> --}}
                                         <a class="btn btn-warning ml-1" href="{{route('admin.training-programs.edit', $program->id)}}">
                                             <i class="fas fa-edit"></i>
                                         </a>

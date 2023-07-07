@@ -39,7 +39,7 @@ class FooterButtonController extends Controller
 
         $footerButtons = FooterButton::create($data);
 
-        return redirect()->route('admin.footer-buttons.index')->withSuccess($footerButtons['name'] . ' - footer button has successfully stored!');
+        return redirect()->route('admin.footer-buttons.index')->withSuccess('Успешно создано !');
     }
 
     /**
@@ -69,7 +69,7 @@ class FooterButtonController extends Controller
 
         $footerButton->update($data);
 
-        return redirect()->route('admin.footer-buttons.index')->withSuccess($footerButton['name'] . ' - footer button has successfully updated!');
+        return redirect()->route('admin.footer-buttons.index')->withSuccess('Успешно обновлено !');
     }
 
     /**

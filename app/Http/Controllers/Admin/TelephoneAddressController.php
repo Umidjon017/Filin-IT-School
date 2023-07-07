@@ -37,7 +37,7 @@ class TelephoneAddressController extends Controller
 
         $telephoneAddress = TelephoneAddress::create($data);
 
-        return redirect()->route('admin.telephone-address.index')->withSuccess($telephoneAddress['telephone'] . ' - telephone-address has successfully stored!');
+        return redirect()->route('admin.telephone-address.index')->withSuccess('Успешно создано !');
     }
 
     /**
@@ -65,7 +65,7 @@ class TelephoneAddressController extends Controller
 
         $telephoneAddress->update($data);
 
-        return redirect()->route('admin.telephone-address.index')->withSuccess($telephoneAddress['telephone'] . ' - telephone-address has successfully updated!');
+        return redirect()->route('admin.telephone-address.index')->withSuccess('Успешно обновлено !');
     }
 
     /**

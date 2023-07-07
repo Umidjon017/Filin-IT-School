@@ -20,7 +20,7 @@
                     @method('PUT')
                     <div class="card-body">
                         <div class="form-group">
-                            <label> {{ __('Title') }} </label>
+                            <label> {{ __('Заголовок') }} </label>
                             <input type="text" class="form-control" name="title" value="{{ $banner->title }}">
                             @error('title')
                                 <div class="alert alert-danger">
@@ -29,7 +29,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label> {{ __('Description') }} </label>
+                            <label> {{ __('Описание') }} </label>
                             <input type="text" class="form-control" name="description" value="{{ $banner->description }}">
                             @error('description')
                                 <div class="alert alert-danger">
@@ -37,7 +37,7 @@
                                 </div>
                             @enderror
                         </div>
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label> {{ __('Order Number') }} </label>
                             <input type="number" class="form-control" name="order" value="{{ $banner->order }}">
                             @error('order')
@@ -45,7 +45,7 @@
                                     {{ $message }}
                                 </div>
                             @enderror
-                        </div>
+                        </div> --}}
 
                         <div class="row">
                             <div class="col-6">
@@ -69,7 +69,7 @@
                     </div>
 
                     <div class="card-footer text-right">
-                        <button class="btn btn-primary mr-1" type="submit">{{ __('Save') }}</button>
+                        <button class="btn btn-primary mr-1" type="submit">{{ __('Сохранить') }}</button>
                     </div>
                 </form>
             </div>

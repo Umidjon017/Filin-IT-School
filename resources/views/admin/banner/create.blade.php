@@ -9,17 +9,17 @@
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
                     <a href="{{ route('admin.banners.index') }}">
-                        <button class="btn btn-danger"><i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Back') }} </button>
+                        <button class="btn btn-info"><i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Назад') }} </button>
                     </a>
 
-                    <h4>{{ __("Add Banners") }}</h4>
+                    <h4>{{ __("Добавить баннер") }}</h4>
                 </div>
 
                 <form action="{{ route('admin.banners.store') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="card-body">
                         <div class="form-group">
-                            <label> {{ __('Image') }} </label>
+                            <label> {{ __('Фон') }} </label>
                             <input type="file" class="form-control" name="image">
                             @error('image')
                                 <div class="alert alert-danger">
@@ -28,7 +28,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label> {{ __('Title') }} </label>
+                            <label> {{ __('Заголовок') }} </label>
                             <input type="text" class="form-control" name="title" value="{{ old('title') }}" placeholder="Enter banner title">
                             @error('title')
                                 <div class="alert alert-danger">
@@ -37,7 +37,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label> {{ __('Description') }} </label>
+                            <label> {{ __('Описание') }} </label>
                             <input type="text" class="form-control" name="description" value="{{ old('description') }}" placeholder="Enter banner description">
                             @error('description')
                                 <div class="alert alert-danger">
@@ -45,7 +45,7 @@
                                 </div>
                             @enderror
                         </div>
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label> {{ __('Order Number') }} </label>
                             <input type="number" class="form-control" name="order" value="{{ old('order') }}" placeholder="Enter banner order number">
                             @error('order')
@@ -53,11 +53,11 @@
                                     {{ $message }}
                                 </div>
                             @enderror
-                        </div>
+                        </div> --}}
                     </div>
 
                     <div class="card-footer text-right">
-                        <button class="btn btn-primary mr-1" type="submit"> {{ __('Submit') }} </button>
+                        <button class="btn btn-primary mr-1" type="submit"> {{ __('Сохранить') }} </button>
                     </div>
                 </form>
             </div>

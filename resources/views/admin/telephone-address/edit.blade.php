@@ -9,10 +9,10 @@
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
                     <a href="{{ route('admin.telephone-address.index') }}">
-                        <button class="btn btn-danger"><i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Back') }} </button>
+                        <button class="btn btn-info"><i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Назад') }} </button>
                     </a>
 
-                    <h4>{{ __("Edit Telephone Addresses") }}</h4>
+                    <h4>{{ __("Изменить") }}</h4>
                 </div>
 
                 <form action="{{ route('admin.telephone-address.update', $telephoneAddress->id) }}" method="post">
@@ -20,7 +20,7 @@
                     @method('PUT')
                     <div class="card-body">
                         <div class="form-group">
-                            <label> {{ __('Telephone number') }} </label>
+                            <label> {{ __('Телефон') }} </label>
                             <input type="text" class="form-control" name="telephone" value="{{ $telephoneAddress->telephone }}">
                             @error('telephone')
                             <div class="alert alert-danger">
@@ -29,7 +29,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label> {{ __('Address') }} </label>
+                            <label> {{ __('Адрес') }} </label>
                             <input type="text" class="form-control" name="address" value="{{ $telephoneAddress->address }}">
                             @error('address')
                             <div class="alert alert-danger">
@@ -40,7 +40,7 @@
                     </div>
 
                     <div class="card-footer text-right">
-                        <button class="btn btn-primary mr-1" type="submit">{{ __('Save') }}</button>
+                        <button class="btn btn-primary mr-1" type="submit">{{ __('Сохранить') }}</button>
                     </div>
                 </form>
             </div>

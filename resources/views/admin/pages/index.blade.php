@@ -9,7 +9,7 @@
             <div class="card">
 
                 <div class="card-header d-flex justify-content-between mt-2">
-                    <h5>{{ __('Pages') }}</h5>
+                    <h5>{{ __('Страницы') }}</h5>
                     <a class="btn btn-primary" href="{{ route('admin.pages.create')}}"> {{ __('Add') }} </a>
                 </div>
 
@@ -33,11 +33,11 @@
                             <thead>
                             <tr>
                                 <th>{{ __('#') }}</th>
-                                <th>{{ __('Title') }}</th>
-                                <th>{{ __('Description') }}</th>
-                                <th>{{ __('Body') }}</th>
-                                <th>{{ __('Url') }}</th>
-                                <th class="text-center">{{ __('Action') }}</th>
+                                <th>{{ __('Заголовок') }}</th>
+                                {{-- <th>{{ __('Описание') }}</th> --}}
+                                <th>{{ __('Текст') }}</th>
+                                <th>{{ __('Ссылка') }}</th>
+                                <th class="text-center">{{ __('Действия') }}</th>
                             </tr>
                             </thead>
                             <tbody>

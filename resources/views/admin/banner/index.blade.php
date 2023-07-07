@@ -9,8 +9,10 @@
             <div class="card">
 
                 <div class="card-header d-flex justify-content-between mt-2">
-                    <h5>{{ __('Banners') }}</h5>
-                    <a class="btn btn-primary" href="{{ route('admin.banners.create')}}"> {{ __('Add') }} </a>
+                    <h5>{{ __('Баннеры') }}</h5>
+                    @if(count($banners)<1)
+                    <a class="btn btn-primary" href="{{ route('admin.banners.create')}}"> {{ __('Добавить') }} </a>
+                    @endif
                 </div>
 
                 <div class="card-body">
@@ -33,11 +35,11 @@
                             <thead>
                             <tr>
                                 <th>{{ __('#') }}</th>
-                                <th>{{ __('Image') }}</th>
-                                <th>{{ __('Title') }}</th>
-                                <th>{{ __('Description') }}</th>
-                                <th>{{ __('Order') }}</th>
-                                <th class="text-center">{{ __('Action') }}</th>
+                                <th>{{ __('Фото') }}</th>
+                                <th>{{ __('Заголовок') }}</th>
+                                <th>{{ __('Описание') }}</th>
+                                {{-- <th>{{ __('Order') }}</th> --}}
+                                <th class="text-center">{{ __('Действия') }}</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -47,11 +49,11 @@
                                     <td><img src="{{ asset('/admin/images/banners/'.$program->image) }}" width="100px"></td>
                                     <td class="text-break">{{ $program->title }}</td>
                                     <td class="text-break">{{ $program->description }}</td>
-                                    <td>{{ $program->order }}</td>
+                                    {{-- <td>{{ $program->order }}</td> --}}
                                     <td class="d-flex justify-content-center">
-                                        <a class="btn btn-primary" href="{{route('admin.banners.show', $program->id)}}">
+                                        {{-- <a class="btn btn-primary" href="{{route('admin.banners.show', $program->id)}}">
                                             <i class="fas fa-eye"></i>
-                                        </a>
+                                        </a> --}}
                                         <a class="btn btn-warning ml-1" href="{{route('admin.banners.edit', $program->id)}}">
                                             <i class="fas fa-edit"></i>
                                         </a>

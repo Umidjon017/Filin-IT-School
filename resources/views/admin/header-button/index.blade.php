@@ -9,8 +9,8 @@
             <div class="card">
 
                 <div class="card-header d-flex justify-content-between mt-2">
-                    <h5>{{ __('Header Buttons') }}</h5>
-                    <a class="btn btn-primary" href="{{ route('admin.header-buttons.create')}}"> {{ __('Add') }} </a>
+                    <h5>{{ __('Кнопки (Header)') }}</h5>
+                    <a class="btn btn-primary" href="{{ route('admin.header-buttons.create')}}"> {{ __('Добавить') }} </a>
                 </div>
 
                 <div class="card-body">
@@ -33,11 +33,11 @@
                             <thead>
                                 <tr>
                                     <th>{{ __('#') }}</th>
-                                    <th>{{ __('Name') }}</th>
-                                    <th>{{ __('Url') }}</th>
-                                    <th>{{ __('Order') }}</th>
-                                    <th>{{ __('Status') }}</th>
-                                    <th class="text-center">{{ __('Action') }}</th>
+                                    <th>{{ __('Текст') }}</th>
+                                    <th>{{ __('Ссылка') }}</th>
+                                    <th>{{ __('Порядок') }}</th>
+                                    <th>{{ __('Статус') }}</th>
+                                    <th class="text-center">{{ __('Действия') }}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -55,9 +55,9 @@
                                         @endif
                                     </td>
                                     <td class="d-flex justify-content-center">
-                                        <a class="btn btn-primary" href="{{route('admin.header-buttons.show', $button->id)}}">
+                                        {{-- <a class="btn btn-primary" href="{{route('admin.header-buttons.show', $button->id)}}">
                                             <i class="fas fa-eye"></i>
-                                        </a>
+                                        </a> --}}
                                         <a class="btn btn-warning ml-1" href="{{route('admin.header-buttons.edit', $button->id)}}">
                                             <i class="fas fa-edit"></i>
                                         </a>

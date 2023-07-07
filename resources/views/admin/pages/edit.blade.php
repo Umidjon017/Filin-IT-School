@@ -5,14 +5,14 @@
     </x-slot>
 
     <div class="row">
-        <div class="col-12 col-md-6 col-lg-6">
+        <div class="col-12 col-md-12 col-lg-12">
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
                     <a href="{{ route('admin.pages.index') }}">
-                        <button class="btn btn-danger"><i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Back') }} </button>
+                        <button class="btn btn-danger"><i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Назад') }} </button>
                     </a>
 
-                    <h4>{{ __("Edit Pages") }}</h4>
+                    <h4>{{ __("Изменить") }}</h4>
                 </div>
 
                 <form action="{{ route('admin.pages.update', $page->id) }}" method="post">
@@ -20,7 +20,7 @@
                     @method('PUT')
                     <div class="card-body">
                         <div class="form-group">
-                            <label> {{ __('Title') }} </label>
+                            <label> {{ __('Заголовок') }} </label>
                             <input type="text" class="form-control" name="title" value="{{ $page->title }}">
                             @error('title')
                                 <div class="alert alert-danger">
@@ -28,7 +28,7 @@
                                 </div>
                             @enderror
                         </div>
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label> {{ __('Description') }} </label>
                             <input type="text" class="form-control" name="description" value="{{ $page->description }}">
                             @error('description')
@@ -36,9 +36,9 @@
                                     {{ $message }}
                                 </div>
                             @enderror
-                        </div>
+                        </div> --}}
                         <div class="form-group">
-                            <label> {{ __('Body') }} </label>
+                            <label> {{ __('Текст') }} </label>
                             <textarea class="summernote" name="body"> {{ $page->body }} </textarea>
                             @error('body')
                                 <div class="alert alert-danger">
@@ -47,7 +47,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label> {{ __('Url') }} </label>
+                            <label> {{ __('Ссылка') }} </label>
                             <input type="text" class="form-control" name="url" value="{{ $page->url }}">
                             @error('url')
                             <div class="alert alert-danger">
@@ -85,7 +85,7 @@
                     </div>
 
                     <div class="card-footer text-right">
-                        <button class="btn btn-primary mr-1" type="submit">{{ __('Save') }}</button>
+                        <button class="btn btn-primary mr-1" type="submit">{{ __('Сохранить') }}</button>
                     </div>
                 </form>
             </div>

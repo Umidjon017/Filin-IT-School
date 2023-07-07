@@ -22,7 +22,7 @@ class StoreBlockTextOneRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => 'required',
+            // 'title' => 'required',
             'body' => 'required',
         ];
     }
@@ -30,7 +30,7 @@ class StoreBlockTextOneRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'title.required' => 'The title must be entered',
+            // 'title.required' => 'The title must be entered',
             'body.required'  => 'The body must be entered',
         ];
     }

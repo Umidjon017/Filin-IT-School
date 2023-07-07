@@ -9,7 +9,7 @@
             <div class="card">
 
                 <div class="card-header d-flex justify-content-between mt-2">
-                    <h5>{{ __('Block Text Two') }}</h5>
+                    <h5>{{ __('Блок "Наша миссия"') }}</h5>
                     @if($blockTextTwo->isEmpty())
                         <a class="btn btn-primary" href="{{ route('admin.block-text-two.create')}}"> {{ __('Add') }} </a>
                     @else
@@ -37,9 +37,9 @@
                             <thead>
                             <tr>
                                 <th>{{ __('#') }}</th>
-                                <th>{{ __('Title') }}</th>
-                                <th>{{ __('Body') }}</th>
-                                <th class="text-center">{{ __('Action') }}</th>
+                                <th>{{ __('Заголовок') }}</th>
+                                <th>{{ __('Текст') }}</th>
+                                <th class="text-center">{{ __('Действия') }}</th>
                             </tr>
                             </thead>
                             <tbody>
