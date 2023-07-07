@@ -32,6 +32,11 @@
                         </div> <hr>
 
                         <div class="d-flex justify-content-between">
+                            <h5> {{ __('Url') }} </h5>
+                            <h6> {{ $trainingProgram->url }} </h6>
+                        </div> <hr>
+
+                        <div class="d-flex justify-content-between">
                             <h5> {{ __('Order Number') }} </h5>
                             <h6> {{ $trainingProgram->order }} </h6>
                         </div> <hr>
@@ -51,7 +56,7 @@
                     <div class="col-md-6 col-sm-12">
                         <h2 class="text-center"> {{ __('Icon') }} </h2>
                         <div>
-                            <img src="{{ asset('/admin/images/training-programs/'.$trainingProgram->icon) }}" width="100%">
+                            <img src="{{ asset('/admin/images/training-programs/'.$trainingProgram->icon) }}" width="100%" alt="icon">
                         </div>
                     </div>
                 </div>

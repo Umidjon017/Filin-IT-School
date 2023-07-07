@@ -16,14 +16,14 @@ class HomeController extends Controller
 {
     public function index(): View
     {
-        $headerButtons = HeaderButton::all();
-        $footerButtons = FooterButton::all();
-        $trainingPrograms = TrainingProgram::all();
+        $headerButtons = HeaderButton::active()->order()->get();
+        $footerButtons = FooterButton::active()->order()->get();
+        $trainingPrograms = TrainingProgram::active()->order()->get();
         $telephoneAddress = TelephoneAddress::all();
         $blockTextOne = BlockTextOne::all();
         $blockTextTwo = BlockTextTwo::all();
         $schoolResults = SchoolResult::all();
-        $banner=Banner::latest()->first();
+        $banner = Banner::order()->latest()->first();
 
         return view('layouts.front', compact(
             'headerButtons', 'footerButtons', 'trainingPrograms', 'telephoneAddress',

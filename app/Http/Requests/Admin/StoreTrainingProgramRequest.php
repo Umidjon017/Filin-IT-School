@@ -24,6 +24,7 @@ class StoreTrainingProgramRequest extends FormRequest
         return [
             'icon' => 'required',
             'name' => 'required',
+            'url' => 'required',
         ];
     }
 
@@ -32,6 +33,7 @@ class StoreTrainingProgramRequest extends FormRequest
         return [
             'icon.required'  => 'The icon must be entered',
             'name.required' => 'The name must be entered',
+            'url.required' => 'The url must be entered',
         ];
     }
 }

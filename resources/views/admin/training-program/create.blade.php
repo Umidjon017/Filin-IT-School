@@ -19,8 +19,8 @@
                     @csrf
                     <div class="card-body">
                         <div class="form-group">
-                            <label> {{ __('Icon') }} </label>
-                            <input type="file" class="form-control" name="icon">
+                            <label for="icon"> {{ __('Icon') }} </label>
+                            <input id="icon" type="file" class="form-control" name="icon">
                             @error('icon')
                                 <div class="alert alert-danger">
                                     {{ $message }}
@@ -28,8 +28,8 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label> {{ __('Название') }} </label>
-                            <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Enter training program name">
+                            <label for="name"> {{ __('Название') }} </label>
+                            <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Enter training program name">
                             @error('name')
                                 <div class="alert alert-danger">
                                     {{ $message }}
@@ -37,8 +37,17 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label> {{ __('Порядковый номер') }} </label>
-                            <input type="number" class="form-control" name="order" value="{{ old('order') }}" placeholder="Enter training program order number">
+                            <label for="url"> {{ __('Ссылка') }} </label>
+                            <input id="url" type="text" class="form-control" name="url" value="{{ old('url') }}" placeholder="Enter training program url">
+                            @error('url')
+                                <div class="alert alert-danger">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <label for="order"> {{ __('Порядковый номер') }} </label>
+                            <input id="order" type="number" class="form-control" name="order" value="{{ old('order') }}" placeholder="Enter training program order number">
                             @error('order')
                                 <div class="alert alert-danger">
                                     {{ $message }}

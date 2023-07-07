@@ -10,9 +10,7 @@
 
                 <div class="card-header d-flex justify-content-between mt-2">
                     <h5>{{ __('Баннеры') }}</h5>
-                    @if(count($banners)<1)
                     <a class="btn btn-primary" href="{{ route('admin.banners.create')}}"> {{ __('Добавить') }} </a>
-                    @endif
                 </div>
 
                 <div class="card-body">
@@ -43,21 +41,21 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($banners as $program)
+                            @foreach($banners as $banner)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td><img src="{{ asset('/admin/images/banners/'.$program->image) }}" width="100px"></td>
-                                    <td class="text-break">{{ $program->title }}</td>
-                                    <td class="text-break">{{ $program->description }}</td>
-                                    {{-- <td>{{ $program->order }}</td> --}}
+                                    <td><img src="{{ asset('/admin/images/banners/'.$banner->image) }}" width="100px" alt="Фото"></td>
+                                    <td class="text-break">{{ $banner->title }}</td>
+                                    <td class="text-break">{{ $banner->description }}</td>
+                                    {{-- <td>{{ $banner->order }}</td> --}}
                                     <td class="d-flex justify-content-center">
-                                        {{-- <a class="btn btn-primary" href="{{route('admin.banners.show', $program->id)}}">
+                                        {{-- <a class="btn btn-primary" href="{{route('admin.banners.show', $banner->id)}}">
                                             <i class="fas fa-eye"></i>
                                         </a> --}}
-                                        <a class="btn btn-warning ml-1" href="{{route('admin.banners.edit', $program->id)}}">
+                                        <a class="btn btn-warning ml-1" href="{{route('admin.banners.edit', $banner->id)}}">
                                             <i class="fas fa-edit"></i>
                                         </a>
-                                        <form action="{{route('admin.banners.destroy', $program->id)}}" method="post">
+                                        <form action="{{route('admin.banners.destroy', $banner->id)}}" method="post">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger ml-1">

@@ -30,4 +30,9 @@ class Banner extends Model
             unlink(self::FILE_PATH . $this->image);
         }
     }
+
+    public function scopeOrder($query)
+    {
+        return $query->orderBy('order', 'asc');
+    }
 }

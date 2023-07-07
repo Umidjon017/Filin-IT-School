@@ -15,7 +15,7 @@ class FooterButtonController extends Controller
      */
     public function index(): View
     {
-        $footerButtons = FooterButton::paginate(5);
+        $footerButtons = FooterButton::paginate(10);
 
         return view('admin.footer-button.index', compact('footerButtons'));
     }

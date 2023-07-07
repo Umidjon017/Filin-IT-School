@@ -24,6 +24,7 @@ class UpdateTrainingProgramRequest extends FormRequest
         return [
             'name' => 'required',
             'order' => 'required',
+            'url' => 'required',
         ];
     }
 
@@ -32,6 +33,7 @@ class UpdateTrainingProgramRequest extends FormRequest
         return [
             'name.required' => 'The name must be entered',
             'order.required'  => 'The order number must be entered',
+            'url.required' => 'The url must be entered',
         ];
     }
 }

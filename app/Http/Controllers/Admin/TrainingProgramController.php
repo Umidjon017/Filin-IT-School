@@ -15,7 +15,7 @@ class TrainingProgramController extends Controller
      */
     public function index(): View
     {
-        $trainingPrograms = TrainingProgram::paginate(5);
+        $trainingPrograms = TrainingProgram::paginate(10);
 
         return view('admin.training-program.index', compact('trainingPrograms'));
     }

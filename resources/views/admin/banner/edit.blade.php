@@ -20,8 +20,8 @@
                     @method('PUT')
                     <div class="card-body">
                         <div class="form-group">
-                            <label> {{ __('Заголовок') }} </label>
-                            <input type="text" class="form-control" name="title" value="{{ $banner->title }}">
+                            <label for="title"> {{ __('Заголовок') }} </label>
+                            <input id="title" type="text" class="form-control" name="title" value="{{ $banner->title }}">
                             @error('title')
                                 <div class="alert alert-danger">
                                     {{ $message }}
@@ -29,8 +29,8 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label> {{ __('Описание') }} </label>
-                            <input type="text" class="form-control" name="description" value="{{ $banner->description }}">
+                            <label for="description"> {{ __('Описание') }} </label>
+                            <input id="description" type="text" class="form-control" name="description" value="{{ $banner->description }}">
                             @error('description')
                                 <div class="alert alert-danger">
                                     {{ $message }}
@@ -50,8 +50,8 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="form-group">
-                                    <label> {{ __('Image') }} </label>
-                                    <input type="file" class="form-control" name="image" value="{{ $banner->image }}">
+                                    <label for="image"> {{ __('Image') }} </label>
+                                    <input id="image" type="file" class="form-control" name="image" value="{{ $banner->image }}">
                                     @error('image')
                                     <div class="alert alert-danger">
                                         {{ $message }}
@@ -62,7 +62,7 @@
 
                             <div class="col-6">
                                 <div>
-                                    <img src="{{ asset('/admin/images/banners/'.$banner->image) }}" width="100%">
+                                    <img src="{{ asset('/admin/images/banners/'.$banner->image) }}" width="100%" alt="Фото">
                                 </div>
                             </div>
                         </div>

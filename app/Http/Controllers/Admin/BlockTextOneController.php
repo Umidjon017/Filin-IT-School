@@ -15,7 +15,7 @@ class BlockTextOneController extends Controller
      */
     public function index(): View
     {
-        $blockTextOne = BlockTextOne::paginate(5);
+        $blockTextOne = BlockTextOne::paginate(10);
 
         return view('admin.block-text-one.index', compact('blockTextOne'));
     }

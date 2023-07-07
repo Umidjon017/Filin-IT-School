@@ -20,8 +20,8 @@
                     @method('PUT')
                     <div class="card-body">
                         <div class="form-group">
-                            <label> {{ __('Название') }} </label>
-                            <input type="text" class="form-control" name="name" value="{{ $trainingProgram->name }}">
+                            <label for="name"> {{ __('Название') }} </label>
+                            <input id="name" type="text" class="form-control" name="name" value="{{ $trainingProgram->name }}">
                             @error('name')
                                 <div class="alert alert-danger">
                                     {{ $message }}
@@ -29,8 +29,17 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label> {{ __('Порядковый номер') }} </label>
-                            <input type="number" class="form-control" name="order" value="{{ $trainingProgram->order }}">
+                            <label for="url"> {{ __('Ссылка') }} </label>
+                            <input id="url" type="text" class="form-control" name="url" value="{{ $trainingProgram->url }}">
+                            @error('url')
+                                <div class="alert alert-danger">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <label for="order"> {{ __('Порядковый номер') }} </label>
+                            <input id="order" type="number" class="form-control" name="order" value="{{ $trainingProgram->order }}">
                             @error('order')
                                 <div class="alert alert-danger">
                                     {{ $message }}
@@ -39,8 +48,8 @@
                         </div>
                         <div class="form-group">
                             <div class="control-label"> {{ __('Status') }} </div>
-                            <label class="custom-switch mt-2">
-                                <input type="checkbox" class="custom-switch-input" name="status" @if($trainingProgram->status == 1) checked @endif>
+                            <label for="status" class="custom-switch mt-2">
+                                <input id="status" type="checkbox" class="custom-switch-input" name="status" @if($trainingProgram->status == 1) checked @endif>
                                 <span class="custom-switch-indicator"></span>
                                 {{-- <span class="custom-switch-description"> {{ __('Press to activate/inactivate the status') }} </span> --}}
                             </label>
@@ -49,8 +58,8 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="form-group">
-                                    <label> {{ __('Иконка') }} </label>
-                                    <input type="file" class="form-control" name="icon" value="{{ $trainingProgram->icon }}">
+                                    <label for="icon"> {{ __('Иконка') }} </label>
+                                    <input id="icon" type="file" class="form-control" name="icon" value="{{ $trainingProgram->icon }}">
                                     @error('icon')
                                     <div class="alert alert-danger">
                                         {{ $message }}
@@ -61,7 +70,7 @@
 
                             <div class="col-6">
                                 <div>
-                                    <img src="{{ asset('/admin/images/training-programs/'.$trainingProgram->icon) }}" width="100%">
+                                    <img src="{{ asset('/admin/images/training-programs/'.$trainingProgram->icon) }}" width="100%" alt="icon">
                                 </div>
                             </div>
                         </div>

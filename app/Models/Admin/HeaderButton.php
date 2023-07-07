@@ -10,4 +10,14 @@ class HeaderButton extends Model
     use HasFactory;
 
     protected $fillable = ['name', 'url', 'status', 'order'];
+
+    public function scopeActive($query)
+    {
+        return $query->where('status', 1);
+    }
+
+    public function scopeOrder($query)
+    {
+        return $query->orderBy('order', 'asc');
+    }
 }

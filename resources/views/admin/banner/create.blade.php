@@ -28,8 +28,8 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label> {{ __('Заголовок') }} </label>
-                            <input type="text" class="form-control" name="title" value="{{ old('title') }}" placeholder="Enter banner title">
+                            <label for="title"> {{ __('Заголовок') }} </label>
+                            <input id="title" type="text" class="form-control" name="title" value="{{ old('title') }}" placeholder="Enter banner title">
                             @error('title')
                                 <div class="alert alert-danger">
                                     {{ $message }}
@@ -37,8 +37,8 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label> {{ __('Описание') }} </label>
-                            <input type="text" class="form-control" name="description" value="{{ old('description') }}" placeholder="Enter banner description">
+                            <label for="description"> {{ __('Описание') }} </label>
+                            <input id="description" type="text" class="form-control" name="description" value="{{ old('description') }}" placeholder="Enter banner description">
                             @error('description')
                                 <div class="alert alert-danger">
                                     {{ $message }}

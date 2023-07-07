@@ -11,7 +11,7 @@ class TrainingProgram extends Model
 
     const FILE_PATH = 'admin/images/training-programs/';
 
-    protected $fillable = ['icon', 'name', 'status', 'order'];
+    protected $fillable = ['icon', 'name', 'url', 'status', 'order'];
 
     protected static function boot()
     {
@@ -29,5 +29,15 @@ class TrainingProgram extends Model
         if (file_exists(self::FILE_PATH . $this->icon)) {
             unlink(self::FILE_PATH . $this->icon);
         }
+    }
+
+    public function scopeActive($query)
+    {
+        return $query->where('status', 1);
+    }
+
+    public function scopeOrder($query)
+    {
+        return $query->orderBy('order', 'asc');
     }
 }
