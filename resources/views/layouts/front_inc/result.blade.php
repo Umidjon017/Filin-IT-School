@@ -6,7 +6,7 @@
             </p>
             <div class="results">
                 @foreach($schoolResults as $schoolResult)
-                <div class="result__card rc{{$loop->iteration}}">
+                <div class="result__card">
                     <div class="result__img">
                         <img src="{{ asset('/admin/images/school-results/'.$schoolResult->icon) }}" alt="">
                     </div>
@@ -14,7 +14,7 @@
                     <p class="result__text"> {!! $schoolResult->description !!} </p>
                 </div>
                 @endforeach
-                <div class="rc6">
+                <div class="rc_modal">
                     <button class="result__modal__btn" id="modal__btn">ОСТАВИТЬ ЗАЯВКУ</button>
                     <div class="result__modal">
                         <div class="rm__close"></div>

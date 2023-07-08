@@ -10,7 +10,9 @@
 
                 <div class="card-header d-flex justify-content-between mt-2">
                     <h5>{{ __('Баннеры') }}</h5>
+                    @if($banners->isEmpty())
                     <a class="btn btn-primary" href="{{ route('admin.banners.create')}}"> {{ __('Добавить') }} </a>
+                    @endif
                 </div>
 
                 <div class="card-body">
