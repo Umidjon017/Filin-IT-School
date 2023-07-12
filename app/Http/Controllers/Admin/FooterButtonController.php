@@ -34,8 +34,7 @@ class FooterButtonController extends Controller
     public function store(StoreFooterButtonRequest $request)
     {
         $data = $request->all();
-
-        isset($data['status']) ? $data['status'] = 1 : $data['status'] = 0;
+        isset($data['status']) ? $data['status'] = true : $data['status'] = false;
 
         $footerButtons = FooterButton::create($data);
 
@@ -64,8 +63,7 @@ class FooterButtonController extends Controller
     public function update(UpdateFooterButtonRequest $request, FooterButton $footerButton)
     {
         $data = $request->all();
-
-        isset($data['status']) ? $data['status'] = 1 : $data['status'] = 0;
+        isset($data['status']) ? $data['status'] = true : $data['status'] = false;
 
         $footerButton->update($data);
 
@@ -78,6 +76,6 @@ class FooterButtonController extends Controller
     public function destroy(FooterButton $footerButton)
     {
         $footerButton->delete();
-        return redirect()->route('admin.footer-buttons.index')->withSuccess($footerButton['name'] . ' - footer button has successfully deleted!');
+        return redirect()->route('admin.footer-buttons.index')->withSuccess('Успешно удалено !');
     }
 }

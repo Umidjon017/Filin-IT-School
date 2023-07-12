@@ -9,10 +9,10 @@
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
                     <a href="{{ route('admin.banners.index') }}">
-                        <button class="btn btn-danger"><i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Back') }} </button>
+                        <button class="btn btn-info"><i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Назад') }} </button>
                     </a>
 
-                    <h4>{{ __("Edit Banner") }}</h4>
+                    <h4>{{ __("Изменить баннер") }}</h4>
                 </div>
 
                 <form action="{{ route('admin.banners.update', $banner->id) }}" method="post" enctype="multipart/form-data">
@@ -38,7 +38,7 @@
                             @enderror
                         </div>
                         {{-- <div class="form-group">
-                            <label> {{ __('Order Number') }} </label>
+                            <label> {{ __('Порядковый номер') }} </label>
                             <input type="number" class="form-control" name="order" value="{{ $banner->order }}">
                             @error('order')
                                 <div class="alert alert-danger">

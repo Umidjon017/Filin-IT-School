@@ -38,7 +38,7 @@ class TrainingProgramController extends Controller
         if ($request->hasFile('icon')) {
             $data['icon'] = $this->fileUpload($request->file('icon'));
         }
-        isset($data['status']) ? $data['status'] = 1 : $data['status'] = 0;
+        isset($data['status']) ? $data['status'] = true : $data['status'] = false;
 
         $trainingProgram = TrainingProgram::create($data);
 
@@ -72,7 +72,7 @@ class TrainingProgramController extends Controller
             $trainingProgram->deleteFile();
             $data['icon'] = $this->fileUpload($request->file('icon'));
         }
-        isset($data['status']) ? $data['status'] = 1 : $data['status'] = 0;
+        isset($data['status']) ? $data['status'] = true : $data['status'] = false;
 
         $trainingProgram->update($data);
 
@@ -85,7 +85,7 @@ class TrainingProgramController extends Controller
     public function destroy(TrainingProgram $trainingProgram)
     {
         $trainingProgram->delete();
-        return redirect()->route('admin.training-programs.index')->withSuccess($trainingProgram['name'] . ' - training program has successfully deleted!');
+        return redirect()->route('admin.training-programs.index')->withSuccess('Успешно удалено !');
     }
 
     public function fileUpload($file): string

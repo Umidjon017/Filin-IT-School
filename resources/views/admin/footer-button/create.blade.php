@@ -19,8 +19,8 @@
                     @csrf
                     <div class="card-body">
                         <div class="form-group">
-                            <label> {{ __('Текст') }} </label>
-                            <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Enter footer button name">
+                            <label for="name"> {{ __('Текст') }} </label>
+                            <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Введите название кнопки">
                             @error('name')
                                 <div class="alert alert-danger">
                                     {{ $message }}
@@ -28,8 +28,8 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label> {{ __('Ссылка') }} </label>
-                            <input type="url" class="form-control" name="url" value="{{ old('url') }}" placeholder="Enter footer button url">
+                            <label for="url"> {{ __('Ссылка') }} </label>
+                            <input id="url" type="url" class="form-control" name="url" value="{{ old('url') }}" placeholder="Введите ссылку">
                             @error('url')
                                 <div class="alert alert-danger">
                                     {{ $message }}
@@ -37,8 +37,8 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label> {{ __('Порядковый номер') }} </label>
-                            <input type="number" class="form-control" name="order" value="{{ old('order') }}" placeholder="Enter footer button order number">
+                            <label for="order_number"> {{ __('Порядковый номер') }} </label>
+                            <input id="order_number" type="number" class="form-control" name="order" value="{{ old('order') }}" placeholder="Введите порядковый номер">
                             @error('order')
                                 <div class="alert alert-danger">
                                     {{ $message }}
@@ -46,9 +46,9 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <div class="control-label"> {{ __('Status') }} </div>
-                            <label class="custom-switch mt-2">
-                                <input type="checkbox" class="custom-switch-input" name="status" checked>
+                            <div class="control-label"> {{ __('Статус') }} </div>
+                            <label for="status" class="custom-switch mt-2">
+                                <input id="status" type="checkbox" class="custom-switch-input" name="status" checked>
                                 <span class="custom-switch-indicator"></span>
                                 {{-- <span class="custom-switch-description"> {{ __('Press to activate/inactivate the status') }} </span> --}}
                             </label>

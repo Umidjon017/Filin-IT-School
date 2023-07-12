@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\FooterButtonController;
 use App\Http\Controllers\Admin\HeaderButtonController;
 use App\Http\Controllers\Admin\PageController;
+use App\Http\Controllers\Admin\QuestionController;
 use App\Http\Controllers\Admin\SchoolResultController;
 use App\Http\Controllers\Admin\TelephoneAddressController;
 use App\Http\Controllers\Admin\TrainingProgramController;
@@ -26,6 +27,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/page/{page}', [HomeController::class, 'page'])->name('home.page');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -54,6 +56,8 @@ Route::prefix('/admin')->name('admin.')->middleware(['auth', 'verified'])->group
     Route::resource('/school-results', SchoolResultController::class);
     // Pages
     Route::resource('/pages', PageController::class);
+    // Questions
+    Route::resource('/questions', QuestionController::class);
 });
 
 require __DIR__.'/auth.php';

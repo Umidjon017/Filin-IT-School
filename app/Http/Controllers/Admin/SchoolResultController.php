@@ -84,7 +84,7 @@ class SchoolResultController extends Controller
     {
         $schoolResult->delete();
 
-        return redirect()->route('admin.school-results.index')->withSuccess($schoolResult['title'] . ' - result has successfully deleted!');
+        return redirect()->route('admin.school-results.index')->withSuccess('Успешно удалено !');
     }
 
     public function fileUpload($file): string

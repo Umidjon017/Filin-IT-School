@@ -20,8 +20,8 @@
                     @method('PUT')
                     <div class="card-body">
                         <div class="form-group">
-                            <label> {{ __('Телефон') }} </label>
-                            <input type="text" class="form-control" name="telephone" value="{{ $telephoneAddress->telephone }}">
+                            <label for="telephone"> {{ __('Телефон') }} </label>
+                            <input id="telephone" type="text" class="form-control" name="telephone" value="{{ $telephoneAddress->telephone }}">
                             @error('telephone')
                             <div class="alert alert-danger">
                                 {{ $message }}
@@ -29,8 +29,8 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label> {{ __('Адрес') }} </label>
-                            <input type="text" class="form-control" name="address" value="{{ $telephoneAddress->address }}">
+                            <label for="telephone"> {{ __('Адрес') }} </label>
+                            <input id="telephone" type="text" class="form-control" name="address" value="{{ $telephoneAddress->address }}">
                             @error('address')
                             <div class="alert alert-danger">
                                 {{ $message }}

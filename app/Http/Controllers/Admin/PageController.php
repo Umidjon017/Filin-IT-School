@@ -34,8 +34,18 @@ class PageController extends Controller
     public function store(StorePageRequest $request)
     {
         $data = $request->all();
+        isset($data['status']) ? $data['status'] = true : $data['status'] = false;
 
         $page = Page::create($data);
+
+        if ($request->hasFile('images')) {
+            foreach ($request->file('images') as $image) {
+                $pageImages = $this->fileUpload($image);
+                $page->images()->create([
+                    'image' => $pageImages
+                ]);
+            }
+        }
 
         return redirect()->route('admin.pages.index')->withSuccess('Успешно создано !');
     }
@@ -62,8 +72,20 @@ class PageController extends Controller
     public function update(UpdatePageRequest $request, Page $page)
     {
         $data = $request->all();
+        isset($data['status']) ? $data['status'] = true : $data['status'] = false;
 
         $page->update($data);
+
+        if ($request->hasFile('images')) {
+            $page->deleteImages();
+            foreach ($request->file('images') as $image) {
+                $pageImage = $this->fileUpload($image);
+                $page->images()->updateOrCreate([
+                    'page_id' => $page->id,
+                    'image' => $pageImage
+                ]);
+            }
+        }
 
         return redirect()->route('admin.pages.index')->withSuccess('Успешно обновлено !');
     }
@@ -74,6 +96,13 @@ class PageController extends Controller
     public function destroy(Page $page)
     {
         $page->delete();
-        return redirect()->route('admin.pages.index')->withSuccess($page['title'] . ' - page has successfully deleted!');
+        return redirect()->route('admin.pages.index')->withSuccess('Успешно удалено!');
+    }
+
+    public function fileUpload($file): string
+    {
+        $filename = time().'_'.$file->getClientOriginalName();
+        $file->move(public_path(Page::FILE_PATH), $filename);
+        return $filename;
     }
 }

@@ -33,7 +33,7 @@
                             <thead>
                             <tr>
                                 <th>{{ __('#') }}</th>
-                                <th>{{ __('Иконка') }}</th>
+                                <th>{{ __('Икона') }}</th>
                                 <th>{{ __('Наввание') }}</th>
                                 <th>{{ __('Ссылка') }}</th>
                                 <th>{{ __('Порядковый номер') }}</th>
@@ -45,15 +45,15 @@
                             @foreach($trainingPrograms as $program)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td><img src="{{ asset('/admin/images/training-programs/'.$program->icon) }}" width="100px" alt="Иконка"></td>
+                                    <td><img src="{{ asset('/admin/images/training-programs/'.$program->icon) }}" width="100px" alt="Икона"></td>
                                     <td>{{ $program->name }}</td>
                                     <td>{{ $program->url }}</td>
                                     <td>{{ $program->order }}</td>
                                     <td>
                                         @if($program->status == 1)
-                                            <div class="badge badge-success"> {{ __('Active') }} </div>
+                                            <div class="badge badge-success"> {{ __('Активный') }} </div>
                                         @else
-                                            <div class="badge badge-danger"> {{ __('Inactive') }} </div>
+                                            <div class="badge badge-danger"> {{ __('Неактивный') }} </div>
                                         @endif
                                     </td>
                                     <td class="d-flex justify-content-center">

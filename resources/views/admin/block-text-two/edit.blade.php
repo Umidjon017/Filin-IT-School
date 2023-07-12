@@ -20,8 +20,8 @@
                     @method('PUT')
                     <div class="card-body">
                         <div class="form-group">
-                            <label> {{ __('Заголовок') }} </label>
-                            <input type="text" class="form-control" name="title" value="{{ $blockTextTwo->title }}">
+                            <label for="title"> {{ __('Заголовок') }} </label>
+                            <input id="title" type="text" class="form-control" name="title" value="{{ $blockTextTwo->title }}">
                             @error('title')
                                 <div class="alert alert-danger">
                                     {{ $message }}
@@ -29,8 +29,8 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label> {{ __('Текст') }} </label>
-                            <textarea class="summernote" name="body"> {{ $blockTextTwo->body }} </textarea>
+                            <label for="body"> {{ __('Текст') }} </label>
+                            <textarea id="body" class="summernote" name="body"> {{ $blockTextTwo->body }} </textarea>
                             @error('body')
                                 <div class="alert alert-danger">
                                     {{ $message }}

@@ -9,7 +9,7 @@
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
                     <a href="{{ route('admin.header-buttons.index') }}">
-                        <button class="btn btn-danger"><i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Back') }} </button>
+                        <button class="btn btn-info"><i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Назад') }} </button>
                     </a>
 
                     <h4>{{ __("Добавить кнопку") }}</h4>
@@ -19,8 +19,8 @@
                     @csrf
                     <div class="card-body">
                         <div class="form-group">
-                            <label> {{ __('Текст') }} </label>
-                            <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Enter header button name">
+                            <label for="name"> {{ __('Текст') }} </label>
+                            <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Введите название страницы">
                             @error('name')
                                 <div class="alert alert-danger">
                                     {{ $message }}
@@ -28,8 +28,8 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label> {{ __('Ссылка') }} </label>
-                            <input type="url" class="form-control" name="url" value="{{ old('url') }}" placeholder="Enter header button url">
+                            <label for="url"> {{ __('Ссылка') }} </label>
+                            <input id="url" type="url" class="form-control" name="url" value="{{ old('url') }}" placeholder="Введите адрес страницы">
                             @error('url')
                                 <div class="alert alert-danger">
                                     {{ $message }}
@@ -37,8 +37,8 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label> {{ __('Порядок номер') }} </label>
-                            <input type="number" class="form-control" name="order" value="{{ old('order') }}" placeholder="Enter header button order number">
+                            <label for="order_number"> {{ __('Порядок номер') }} </label>
+                            <input id="order_number" type="number" class="form-control" name="order" value="{{ old('order') }}" placeholder="Введите порядковый номер">
                             @error('order')
                                 <div class="alert alert-danger">
                                     {{ $message }}
@@ -47,8 +47,8 @@
                         </div>
                         <div class="form-group">
                             <div class="control-label"> {{ __('Статус') }} </div>
-                            <label class="custom-switch mt-2">
-                                <input type="checkbox" class="custom-switch-input" name="status" checked>
+                            <label for="status" class="custom-switch mt-2">
+                                <input id="status" type="checkbox" class="custom-switch-input" name="status" checked>
                                 <span class="custom-switch-indicator"></span>
                                 {{-- <span class="custom-switch-description"> {{ __('Press to activate/inactivate the status') }} </span> --}}
                             </label>
@@ -56,7 +56,7 @@
                     </div>
 
                     <div class="card-footer text-right">
-                        <button class="btn btn-primary mr-1" type="submit"> {{ __('Submit') }} </button>
+                        <button class="btn btn-primary mr-1" type="submit"> {{ __('Сохранить') }} </button>
                     </div>
                 </form>
             </div>

@@ -1,7 +1,7 @@
 <x-admin-layout>
 
     <x-slot name="title">
-        {{ __('Edit Block Text One') }}
+        {{ __('Edit block after banner') }}
     </x-slot>
 
     <div class="row">
@@ -9,7 +9,7 @@
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
                     <a href="{{ route('admin.block-text-one.index') }}">
-                        <button class="btn btn-danger"><i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Назад') }} </button>
+                        <button class="btn btn-info"><i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Назад') }} </button>
                     </a>
 
                     <h4>{{ __("Изменить") }}</h4>
@@ -20,8 +20,8 @@
                     @method('PUT')
                     <div class="card-body">
                         {{-- <div class="form-group">
-                            <label> {{ __('Title') }} </label>
-                            <input type="text" class="form-control" name="title" value="{{ $blockTextOne->title }}">
+                            <label for="title"> {{ __('Title') }} </label>
+                            <input id="title" type="text" class="form-control" name="title" value="{{ $blockTextOne->title }}">
                             @error('title')
                                 <div class="alert alert-danger">
                                     {{ $message }}
@@ -29,8 +29,8 @@
                             @enderror
                         </div> --}}
                         <div class="form-group">
-                            <label> {{ __('Текст') }} </label>
-                            <textarea class="summernote" name="body"> {{ $blockTextOne->body }} </textarea>
+                            <label for="body"> {{ __('Текст') }} </label>
+                            <textarea id="body" class="summernote" name="body"> {{ $blockTextOne->body }} </textarea>
                             @error('body')
                                 <div class="alert alert-danger">
                                     {{ $message }}

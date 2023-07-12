@@ -6,6 +6,7 @@ use App\Models\Admin\BlockTextOne;
 use App\Models\Admin\BlockTextTwo;
 use App\Models\Admin\FooterButton;
 use App\Models\Admin\HeaderButton;
+use App\Models\Admin\Page;
 use App\Models\Admin\SchoolResult;
 use App\Models\Admin\TelephoneAddress;
 use App\Models\Admin\TrainingProgram;
@@ -29,5 +30,16 @@ class HomeController extends Controller
             'headerButtons', 'footerButtons', 'trainingPrograms', 'telephoneAddress',
             'blockTextOne', 'blockTextTwo', 'schoolResults','banner'
         ));
+    }
+
+    public function page(string $page): View
+    {
+        $route = Page::where('status', true)->where('url', $page)->first();
+        if (! $route) {
+            return view('test', compact('route'))->with('error', 'Item not found.');
+//            abort(404);
+        }
+
+        return view('test', compact('route'));
     }
 }

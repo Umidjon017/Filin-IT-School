@@ -74,6 +74,6 @@ class BlockTextOneController extends Controller
     public function destroy(BlockTextOne $blockTextOne)
     {
         $blockTextOne->delete();
-        return redirect()->route('admin.block-text-one.index')->withSuccess('Block text one has successfully deleted!');
+        return redirect()->route('admin.block-text-one.index')->withSuccess('Успешно удалено !');
     }
 }

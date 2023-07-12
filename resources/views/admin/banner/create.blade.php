@@ -19,8 +19,8 @@
                     @csrf
                     <div class="card-body">
                         <div class="form-group">
-                            <label> {{ __('Фон') }} </label>
-                            <input type="file" class="form-control" name="image">
+                            <label for="image"> {{ __('Фон') }} </label>
+                            <input id="image" type="file" class="form-control" name="image">
                             @error('image')
                                 <div class="alert alert-danger">
                                     {{ $message }}
@@ -29,7 +29,7 @@
                         </div>
                         <div class="form-group">
                             <label for="title"> {{ __('Заголовок') }} </label>
-                            <input id="title" type="text" class="form-control" name="title" value="{{ old('title') }}" placeholder="Enter banner title">
+                            <input id="title" type="text" class="form-control" name="title" value="{{ old('title') }}" placeholder="Введите название баннера">
                             @error('title')
                                 <div class="alert alert-danger">
                                     {{ $message }}
@@ -38,7 +38,7 @@
                         </div>
                         <div class="form-group">
                             <label for="description"> {{ __('Описание') }} </label>
-                            <input id="description" type="text" class="form-control" name="description" value="{{ old('description') }}" placeholder="Enter banner description">
+                            <input id="description" type="text" class="form-control" name="description" value="{{ old('description') }}" placeholder="Введите описание баннера">
                             @error('description')
                                 <div class="alert alert-danger">
                                     {{ $message }}
@@ -46,8 +46,8 @@
                             @enderror
                         </div>
                         {{-- <div class="form-group">
-                            <label> {{ __('Order Number') }} </label>
-                            <input type="number" class="form-control" name="order" value="{{ old('order') }}" placeholder="Enter banner order number">
+                            <label for=order_number> {{ __('Порядковый номер') }} </label>
+                            <input id=order_number type="number" class="form-control" name="order" value="{{ old('order') }}" placeholder="Введите серийный номер баннера">
                             @error('order')
                                 <div class="alert alert-danger">
                                     {{ $message }}

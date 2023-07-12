@@ -49,9 +49,9 @@
                                     <td>{{ $button->order }}</td>
                                     <td>
                                         @if($button->status == 1)
-                                            <div class="badge badge-success"> {{ __('Active') }} </div>
+                                            <div class="badge badge-success"> {{ __('Активный') }} </div>
                                         @else
-                                            <div class="badge badge-danger"> {{ __('Inactive') }} </div>
+                                            <div class="badge badge-danger"> {{ __('Неактивный') }} </div>
                                         @endif
                                     </td>
                                     <td class="d-flex justify-content-center">

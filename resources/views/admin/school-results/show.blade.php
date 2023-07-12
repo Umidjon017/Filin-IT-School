@@ -9,13 +9,13 @@
             <div class="row mb-2 mt-2">
                 <div class="card-header col-md-6 col-sm-12">
                     <div class="d-flex justify-content-center">
-                        <a href="{{ route('admin.school-results.index') }}"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Back') }} </button></a> &nbsp;
-                        <a href="{{ route('admin.school-results.edit', $schoolResult->id) }}"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square" aria-hidden="true"></i> {{ __('Edit') }} </button></a> &nbsp;
+                        <a href="{{ route('admin.school-results.index') }}"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Назад') }} </button></a> &nbsp;
+                        <a href="{{ route('admin.school-results.edit', $schoolResult->id) }}"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square" aria-hidden="true"></i> {{ __('Редактировать') }} </button></a> &nbsp;
                         <form action="{{route('admin.school-results.destroy', $schoolResult->id)}}" method="post">
                             @csrf
                             @method('DELETE')
                             <button  style="display: inline" type="submit" class="btn btn-danger btn-sm">
-                                <i class="fas fa-trash"  aria-hidden="true"></i> {{ __('Delete') }}
+                                <i class="fas fa-trash"  aria-hidden="true"></i> {{ __('Удалить') }}
                             </button>
                         </form>
                     </div>
@@ -38,9 +38,9 @@
                     </div>
 
                     <div class="col-md-6 col-sm-12">
-                        <h2 class="text-center"> {{ __('Icon') }} </h2>
+                        <h2 class="text-center"> {{ __('Икона') }} </h2>
                         <div>
-                            <img src="{{ asset('/admin/images/school-results/'.$schoolResult->icon) }}" width="100%">
+                            <img src="{{ asset('/admin/images/school-results/'.$schoolResult->icon) }}" width="100%" alt="Икона">
                         </div>
                     </div>
                 </div>

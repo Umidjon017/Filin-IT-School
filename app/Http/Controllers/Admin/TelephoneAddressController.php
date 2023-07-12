@@ -75,6 +75,6 @@ class TelephoneAddressController extends Controller
     {
         $telephoneAddress->delete();
 
-        return redirect()->route('admin.telephone-address.index')->withSuccess($telephoneAddress['telephone'] . ' - telephone-address has successfully deleted!');
+        return redirect()->route('admin.telephone-address.index')->withSuccess('Успешно удалено !');
     }
 }

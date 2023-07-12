@@ -33,14 +33,14 @@
                     <div class="table-responsive">
                         <table class="table table-bordered table-striped table-md">
                             <thead>
-                            <tr>
-                                <th>{{ __('#') }}</th>
-                                <th>{{ __('Фото') }}</th>
-                                <th>{{ __('Заголовок') }}</th>
-                                <th>{{ __('Описание') }}</th>
-                                {{-- <th>{{ __('Order') }}</th> --}}
-                                <th class="text-center">{{ __('Действия') }}</th>
-                            </tr>
+                                <tr>
+                                    <th>{{ __('#') }}</th>
+                                    <th>{{ __('Фото') }}</th>
+                                    <th>{{ __('Заголовок') }}</th>
+                                    <th>{{ __('Описание') }}</th>
+                                    {{-- <th>{{ __('Order') }}</th> --}}
+                                    <th class="text-center">{{ __('Действия') }}</th>
+                                </tr>
                             </thead>
                             <tbody>
                             @foreach($banners as $banner)

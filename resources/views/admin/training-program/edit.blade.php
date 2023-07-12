@@ -47,7 +47,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <div class="control-label"> {{ __('Status') }} </div>
+                            <div class="control-label"> {{ __('Статус') }} </div>
                             <label for="status" class="custom-switch mt-2">
                                 <input id="status" type="checkbox" class="custom-switch-input" name="status" @if($trainingProgram->status == 1) checked @endif>
                                 <span class="custom-switch-indicator"></span>
@@ -58,7 +58,7 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="form-group">
-                                    <label for="icon"> {{ __('Иконка') }} </label>
+                                    <label for="icon"> {{ __('Икона') }} </label>
                                     <input id="icon" type="file" class="form-control" name="icon" value="{{ $trainingProgram->icon }}">
                                     @error('icon')
                                     <div class="alert alert-danger">

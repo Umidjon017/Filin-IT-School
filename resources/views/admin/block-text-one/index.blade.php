@@ -1,7 +1,7 @@
 <x-admin-layout>
 
     <x-slot name="title">
-        {{ __('Block Text One') }}
+        {{ __('Block after banner') }}
     </x-slot>
 
     <div class="row">
@@ -10,7 +10,7 @@
 
                 <div class="card-header d-flex justify-content-between mt-2">
                     <h5>{{ __('Блок после баннера') }}</h5>
-                    @if($blockTextOne->isEmpty())
+                    @if ($blockTextOne->isEmpty())
                         <a class="btn btn-primary" href="{{ route('admin.block-text-one.create')}}"> {{ __('Добавить') }} </a>
                     @endif
                 </div>
@@ -36,7 +36,7 @@
                             <tr>
                                 <th>{{ __('#') }}</th>
                                 {{-- <th>{{ __('Заголовок') }}</th> --}}
-                                <th>{{ __('Body') }}</th>
+                                <th>{{ __('Текст') }}</th>
                                 <th class="text-center">{{ __('Действия') }}</th>
                             </tr>
                             </thead>

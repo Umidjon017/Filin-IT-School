@@ -10,10 +10,8 @@
 
                 <div class="card-header d-flex justify-content-between mt-2">
                     <h5>{{ __('Телефон и адрес') }}</h5>
-                    @if($telephoneAddress->isEmpty())
+                    @if ($telephoneAddress->isEmpty())
                         <a class="btn btn-primary" href="{{ route('admin.telephone-address.create')}}"> {{ __('Добавить') }} </a>
-                    @else
-                        <a href=""></a>
                     @endif
                 </div>
 
@@ -39,7 +37,7 @@
                                 <th>{{ __('#') }}</th>
                                 <th>{{ __('Телефон') }}</th>
                                 <th>{{ __('Адрес') }}</th>
-                             
+
                                 <th class="text-center">{{ __('Действия') }}</th>
                             </tr>
                             </thead>
@@ -49,7 +47,7 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $telAddress->telephone }}</td>
                                     <td>{{ $telAddress->address }}</td>
-                                  
+
                                     <td class="d-flex justify-content-center">
 {{--                                        <a class="btn btn-primary" href="{{route('admin.telephone-address.show', $telAddress->id)}}">--}}
 {{--                                            <i class="fas fa-eye"></i>--}}

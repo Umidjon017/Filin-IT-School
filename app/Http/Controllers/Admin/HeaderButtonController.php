@@ -35,7 +35,7 @@ class HeaderButtonController extends Controller
     {
         $data = $request->all();
 
-        isset($data['status']) ? $data['status'] = 1 : $data['status'] = 0;
+        isset($data['status']) ? $data['status'] = true : $data['status'] = false;
 
         $headerButtons = HeaderButton::create($data);
 
@@ -64,8 +64,7 @@ class HeaderButtonController extends Controller
     public function update(UpdateHeaderButtonRequest $request, HeaderButton $headerButton)
     {
         $data = $request->all();
-
-        isset($data['status']) ? $data['status'] = 1 : $data['status'] = 0;
+        isset($data['status']) ? $data['status'] = true : $data['status'] = false;
 
         $headerButton->update($data);
 
@@ -78,6 +77,6 @@ class HeaderButtonController extends Controller
     public function destroy(HeaderButton $headerButton)
     {
         $headerButton->delete();
-        return redirect()->route('admin.header-buttons.index')->withSuccess($headerButton['name'] . ' - header button has successfully deleted!');
+        return redirect()->route('admin.header-buttons.index')->withSuccess('Успешно удалено !');
     }
 }

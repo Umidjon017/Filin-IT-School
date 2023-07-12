@@ -9,7 +9,7 @@
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
                     <a href="{{ route('admin.telephone-address.index') }}">
-                        <button class="btn btn-danger"><i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Назад') }} </button>
+                        <button class="btn btn-info"><i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Назад') }} </button>
                     </a>
 
                     <h4>{{ __("Добавить") }}</h4>
@@ -19,8 +19,8 @@
                     @csrf
                     <div class="card-body">
                         <div class="form-group">
-                            <label> {{ __('Телефон') }} </label>
-                            <input type="text" class="form-control" name="telephone" value="{{ old('telephone') }}" placeholder="Enter your telephone number">
+                            <label for="telephone"> {{ __('Телефон') }} </label>
+                            <input id="telephone" type="text" class="form-control" name="telephone" value="{{ old('telephone') }}" placeholder="Введите свой номер телефона">
                             @error('telephone')
                                 <div class="alert alert-danger">
                                     {{ $message }}
@@ -28,8 +28,8 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label> {{ __('Адрес') }} </label>
-                            <input type="text" class="form-control" name="address" value="{{ old('address') }}" placeholder="Enter your address">
+                            <label for="telephone"> {{ __('Адрес') }} </label>
+                            <input id="telephone" type="text" class="form-control" name="address" value="{{ old('address') }}" placeholder="Введите свой адрес">
                             @error('address')
                                 <div class="alert alert-danger">
                                     {{ $message }}

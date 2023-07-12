@@ -83,7 +83,7 @@ class BannerController extends Controller
     public function destroy(Banner $banner)
     {
         $banner->delete();
-        return redirect()->route('admin.banners.index')->withSuccess($banner['title'] . ' - banner has successfully deleted!');
+        return redirect()->route('admin.banners.index')->withSuccess('Успешно удалено !');
     }
 
     public function fileUpload($file): string

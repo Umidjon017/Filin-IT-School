@@ -10,7 +10,7 @@
 
                 <div class="card-header d-flex justify-content-between mt-2">
                     <h5>{{ __('Страницы') }}</h5>
-                    <a class="btn btn-primary" href="{{ route('admin.pages.create')}}"> {{ __('Add') }} </a>
+                    <a class="btn btn-primary" href="{{ route('admin.pages.create')}}"> {{ __('Добавить') }} </a>
                 </div>
 
                 <div class="card-body">
@@ -37,6 +37,7 @@
                                 {{-- <th>{{ __('Описание') }}</th> --}}
                                 <th>{{ __('Текст') }}</th>
                                 <th>{{ __('Ссылка') }}</th>
+                                <th>{{ __('Статус') }}</th>
                                 <th class="text-center">{{ __('Действия') }}</th>
                             </tr>
                             </thead>
@@ -45,9 +46,16 @@
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td class="text-break">{{ $page->title }}</td>
-                                    <td class="text-break">{{ $page->description }}</td>
+{{--                                    <td class="text-break">{{ $page->description }}</td>--}}
                                     <td class="text-break">{!! $page->body !!}</td>
                                     <td class="text-break">{{ $page->url }}</td>
+                                    <td>
+                                        @if($page->status == 1)
+                                            <div class="badge badge-success"> {{ __('Активный') }} </div>
+                                        @else
+                                            <div class="badge badge-danger"> {{ __('Неактивный') }} </div>
+                                        @endif
+                                    </td>
                                     <td class="d-flex justify-content-center">
                                         <a class="btn btn-primary" href="{{route('admin.pages.show', $page->id)}}">
                                             <i class="fas fa-eye"></i>

@@ -75,6 +75,6 @@ class BlockTextTwoController extends Controller
     {
         $blockTextTwo->delete();
 
-        return redirect()->route('admin.block-text-two.index')->withSuccess('Block text two has successfully deleted!');
+        return redirect()->route('admin.block-text-two.index')->withSuccess('Успешно удалено !');
     }
 }

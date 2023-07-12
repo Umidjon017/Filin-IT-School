@@ -1,7 +1,7 @@
 <x-admin-layout>
 
     <x-slot name="title">
-        {{ __('Add Block Text One') }}
+        {{ __('Add block after banner') }}
     </x-slot>
 
     <div class="row">
@@ -9,7 +9,7 @@
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
                     <a href="{{ route('admin.block-text-one.index') }}">
-                        <button class="btn btn-danger"><i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Назад') }} </button>
+                        <button class="btn btn-info"><i class="fa fa-arrow-left" aria-hidden="true"></i> {{ __('Назад') }} </button>
                     </a>
 
                     <h4>{{ __("Добавить") }}</h4>
@@ -19,8 +19,8 @@
                     @csrf
                     <div class="card-body">
                         {{-- <div class="form-group">
-                            <label> {{ __('Title') }} </label>
-                            <input type="text" class="form-control" name="title" value="{{ old('title') }}" placeholder="Enter block title">
+                            <label for="title"> {{ __('Title') }} </label>
+                            <input id="title" type="text" class="form-control" name="title" value="{{ old('title') }}" placeholder="Enter block title">
                             @error('title')
                                 <div class="alert alert-danger">
                                     {{ $message }}
@@ -28,8 +28,8 @@
                             @enderror
                         </div> --}}
                         <div class="form-group">
-                            <label> {{ __('Текст') }} </label>
-                            <textarea class="summernote" name="body"> {{ old('body') }} </textarea>
+                            <label for="body"> {{ __('Текст') }} </label>
+                            <textarea id="body" class="summernote" name="body"> {{ old('body') }} </textarea>
                             @error('body')
                                 <div class="alert alert-danger">
                                     {{ $message }}
