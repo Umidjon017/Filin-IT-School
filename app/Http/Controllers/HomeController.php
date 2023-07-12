@@ -19,27 +19,34 @@ class HomeController extends Controller
     {
         $headerButtons = HeaderButton::active()->order()->get();
         $footerButtons = FooterButton::active()->order()->get();
-        $trainingPrograms = TrainingProgram::active()->order()->get();
+        $pages = Page::where('status', true)->get();
         $telephoneAddress = TelephoneAddress::all();
+        $trainingPrograms = TrainingProgram::active()->order()->get();
         $blockTextOne = BlockTextOne::all();
         $blockTextTwo = BlockTextTwo::all();
         $schoolResults = SchoolResult::all();
         $banner = Banner::order()->latest()->first();
 
-        return view('layouts.front', compact(
-            'headerButtons', 'footerButtons', 'trainingPrograms', 'telephoneAddress',
-            'blockTextOne', 'blockTextTwo', 'schoolResults','banner'
+        return view('front.index', compact(
+            'headerButtons', 'footerButtons', 'pages', 'trainingPrograms', 'telephoneAddress',
+            'blockTextOne', 'blockTextTwo', 'schoolResults', 'banner'
         ));
     }
 
     public function page(string $page): View
     {
-        $route = Page::where('status', true)->where('url', $page)->first();
+        $headerButtons = HeaderButton::active()->order()->get();
+        $footerButtons = FooterButton::active()->order()->get();
+        $pages = Page::where('status', true)->get();
+        $telephoneAddress = TelephoneAddress::all();
+        $route = Page::where('status', true)->where('url', $page)->with('images')->first();
+
         if (! $route) {
-            return view('test', compact('route'))->with('error', 'Item not found.');
-//            abort(404);
+            abort(404);
         }
 
-        return view('test', compact('route'));
+        return view('front.page', compact(
+            'headerButtons', 'footerButtons', 'pages', 'telephoneAddress', 'route'
+        ));
     }
 }

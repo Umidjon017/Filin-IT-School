@@ -1,0 +1,264 @@
+.text__page{
+  padding: 255px 80px 0 80px;
+  overflow: hidden;
+}
+.text__page__info{
+  background: #FFFBE6;
+  padding: 60px 60px 0px 80px;
+  margin-bottom: 50px;
+  position: relative;
+}
+.tpi__title{
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  z-index: 2;
+}
+.tpi__item{
+  padding-bottom: 100px;
+  b{
+    color: #000;
+    font-family: Montserrat;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    display: block;
+  }
+  p{
+    color: #000;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+  }
+}
+.text__page__photo{
+  margin-bottom: 250px;
+}
+.tpf__title{
+  color: #000;
+  font-family: Montserrat;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+.tp__photos{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 40px 0px;
+}
+.tp__photo{
+  width: 33%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.tp_images1, .tp_images2, .tp_images3, .tp_images4, .tp_images5{
+  position: absolute;
+}
+.tp_images1{
+  top: 20px;
+  left: -40px;
+  z-index: 0;
+  img{
+    transform: rotate(-20deg);
+  }
+}
+.tp_images2{
+  top: 50%;
+  left: -80px;
+  z-index: -1;
+}
+.tp_images3{
+  bottom: -10px;
+  left: -90px;
+  img{
+    transform: rotate(20deg);
+  }
+}
+.tp_images4{
+  top: 0;
+  right: -115px;
+  z-index: -1;
+}
+.tp_images5{
+  bottom: 40px;
+  right: -70px;
+  img{
+    transform: rotate(-20deg);
+  }
+}
+@media (max-width:1440px) {
+  .tp__photo{
+    height: 260px;
+  }
+  .tpi__title{
+    font-size: 54px;
+  }
+  .tp_images1, .tp_images2, .tp_images3, .tp_images4, .tp_images5, .tp_images6{
+    transform: scale(0.9);
+  }
+}
+@media (max-width:1220px) {
+  .text__page{
+    padding: 160px 60px 0 60px;
+  }
+  .tpi__title{
+    font-size: 44px;
+    margin-bottom: 50px;
+  }
+  .text__page__info{
+    padding: 40px 40px 0px 60px;
+  }
+  .tpf__title{
+    font-size: 40px;
+  }
+  .tpi__item{
+    padding-bottom: 70px;
+  }
+}
+@media (max-width:1024px) {
+  .tp__photo{
+    height: 180px;
+  }
+  .tp_images1, .tp_images2, .tp_images3, .tp_images4, .tp_images5{
+    transform: scale(0.7);
+  }
+  .tp_images5{
+    right: -80px;
+  }
+}
+@media (max-width:768px) {
+  .text__page{
+    padding: 160px 30px 0 30px;
+  }
+  .text__page__info{
+    padding: 30px 30px 0 30px;
+  }
+  .tpi__title{
+    font-size: 25px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .tpi__item{
+    padding-bottom: 30px;
+    b{
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    p{
+      font-size: 10px;
+    }
+  }
+  .tpf__title{
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .tp__photos{
+    gap: 15px 0px;
+  }
+  .tp__photo{
+    height: 120px;
+    padding: 0 5px;
+  }
+  .text__page__photo{
+    margin-bottom: 100px;
+  }
+  .tp_images1, .tp_images2, .tp_images3, .tp_images4, .tp_images5{
+    transform: scale(0.55);
+  }
+  .tp_images1{
+    top: -40px;
+    left: -50px;
+  }
+  .tp_images2{
+    top: 40%;
+    left: -60px;
+  }
+  .tp_images3{
+    bottom: -55px;
+    left: -90px;
+  }
+  .tp_images4{
+    top: -90px;
+    right: -80px;
+  }
+  .tp_images5{
+    bottom: -80px;
+    right: -70px;
+  }
+}
+@media (max-width:620px) {
+  .text__page{
+    padding: 110px 20px 0 20px;
+  }
+  .tpi__title{
+    font-size: 16px;
+  }
+  .tpf__title{
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .tpi__item{
+    padding-bottom: 20px;
+    b{
+      font-size: 10px;
+    }
+  }
+  .tp__photo{
+    width: 50%;
+  }
+}
+@media (max-width:425px) {
+  .text__page__info{
+    padding: 20px 20px 0 20px;
+  }
+  .text__page__photo{
+    margin-bottom: 80px;
+  }
+  .tp__photos{
+    justify-content: space-evenly;
+  }
+  .tp__photo{
+    height: 80px;
+  }
+  .tp_images1, .tp_images2, .tp_images3, .tp_images4, .tp_images5{
+    transform: scale(0.3);
+  }
+  .tp_images1{
+    top: -50px;
+    left: -60px;
+  }
+  .tp_images3{
+    left: -95px;
+  }
+  .tp_images4{
+    top: -110px;
+  }
+  .tp_images5{
+    bottom: -80px;
+    right: -70px;
+  }
+}

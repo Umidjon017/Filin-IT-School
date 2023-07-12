@@ -10,7 +10,7 @@
 
                 <div class="card-header d-flex justify-content-between mt-2">
                     <h5>{{ __('Вопросы') }}</h5>
-                    <a class="btn btn-primary" href="{{ route('admin.questions.create')}}"> {{ __('Добавить') }} </a>
+{{--                    <a class="btn btn-primary" href="{{ route('admin.questions.create')}}"> {{ __('Добавить') }} </a>--}}
                 </div>
 
                 <div class="card-body">

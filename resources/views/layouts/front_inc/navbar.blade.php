@@ -1,4 +1,4 @@
-<header class="navbar">
+<header class="navbar @if(! request()->routeIs('home')) navbar__other__pages @endif">
     <div class="burger__btn">
         <button>
             <div></div>
@@ -24,10 +24,15 @@
                 <a href="{{ $headerButton->url }}" class="active"> {{ $headerButton->name }} </a>
             </li>
             @endforeach
+            @if(! empty($pages)) @foreach($pages as $page)
+            <li>
+                <a href="{{ $page->url }}" class="active"> {{ $page->url }} </a>
+            </li>
+            @endforeach @endif
         </ul>
     </nav>
     <div class="navbar__right">
-        <a href="tel: +7(495) 707-04-39" class="nav__phone">
+        <a href="tel: {{$telephoneAddress[0]->telephone}}" class="nav__phone">
             <img src="{{ asset('front/assets/img/call.png') }}" alt="">
         </a>
         <span class="nav__user">

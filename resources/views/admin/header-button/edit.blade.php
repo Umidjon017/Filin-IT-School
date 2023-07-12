@@ -38,7 +38,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="order_number"> {{ __('Порядок номер') }} </label>
+                            <label for="order_number"> {{ __('Порядковый номер') }} </label>
                             <input id="order_number" type="number" class="form-control" name="order" value="{{ $headerButton->order }}">
                             @error('order')
                                 <div class="alert alert-danger">
