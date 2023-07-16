@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Admin\Banner;
 use App\Models\Admin\BlockTextOne;
 use App\Models\Admin\BlockTextTwo;
 use App\Models\Admin\FooterButton;
@@ -10,7 +11,6 @@ use App\Models\Admin\Page;
 use App\Models\Admin\SchoolResult;
 use App\Models\Admin\TelephoneAddress;
 use App\Models\Admin\TrainingProgram;
-use App\Models\Admin\Banner;
 use Illuminate\View\View;
 
 class HomeController extends Controller
@@ -19,7 +19,6 @@ class HomeController extends Controller
     {
         $headerButtons = HeaderButton::active()->order()->get();
         $footerButtons = FooterButton::active()->order()->get();
-        $pages = Page::where('status', true)->get();
         $telephoneAddress = TelephoneAddress::all();
         $trainingPrograms = TrainingProgram::active()->order()->get();
         $blockTextOne = BlockTextOne::all();
@@ -28,7 +27,7 @@ class HomeController extends Controller
         $banner = Banner::order()->latest()->first();
 
         return view('front.index', compact(
-            'headerButtons', 'footerButtons', 'pages', 'trainingPrograms', 'telephoneAddress',
+            'headerButtons', 'footerButtons', 'trainingPrograms', 'telephoneAddress',
             'blockTextOne', 'blockTextTwo', 'schoolResults', 'banner'
         ));
     }
@@ -37,7 +36,6 @@ class HomeController extends Controller
     {
         $headerButtons = HeaderButton::active()->order()->get();
         $footerButtons = FooterButton::active()->order()->get();
-        $pages = Page::where('status', true)->get();
         $telephoneAddress = TelephoneAddress::all();
         $route = Page::where('status', true)->where('url', $page)->with('images')->first();
 
@@ -46,7 +44,7 @@ class HomeController extends Controller
         }
 
         return view('front.page', compact(
-            'headerButtons', 'footerButtons', 'pages', 'telephoneAddress', 'route'
+            'headerButtons', 'footerButtons', 'telephoneAddress', 'route'
         ));
     }
 }

@@ -14,6 +14,19 @@
 }
 .navbar__other__pages{
   background: rgba(140, 185, 80, 0.502) !important;
+  .active{
+    &::before{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -10px;
+      background: linear-gradient(180deg, rgba(255, 234, 122, 0.00) 0%, #FFEA7A 92.71%);
+      width: calc(100% + 20px);
+      // height: 80px;
+      height: 100%;
+      z-index: -1;
+    }
+  }
 }
 .burger__btn{
   display: none;
@@ -61,19 +74,27 @@
   flex-direction: column;
   flex-grow: 1;
   margin: 0 56px 0 15px;
+  height: 100%;
   &__top{
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 41px;
+    height: 180px;
   }
   &__bottom{
     display: flex;
     align-items: center;
     justify-content: space-between;
     list-style-type: none;
+    height: 100%;
     li{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 100px;
+      padding: 0 20px;
+      height: 100%;
       a{
         color: #0D0D0D;
         font-size: 22px;
@@ -82,13 +103,19 @@
         font-weight: 400;
         line-height: normal;
         text-transform: lowercase;
+        position: relative;
+        text-align: center;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
   }
 }
 
 
-@media (max-width: 1570px) {
+@media (max-width: 1796px) {
   .navbar{
     padding: 0 100px;
   }
@@ -121,6 +148,14 @@
         width: 100px;
         height: 100px;
       }
+    }
+  }
+}
+@media (max-width:1580px) {
+  .nav__bottom{
+    li{
+      min-width: 0px;
+      padding: 0 10px;
     }
   }
 }
@@ -212,6 +247,7 @@
     padding: 0 40px;
     &__top{
       margin-bottom: 0;
+      height: auto;
     }
     &__bottom{
       position: fixed;
@@ -226,9 +262,11 @@
       flex-shrink: 0;
       transition: 0.4s linear;
       overflow: hidden;
+      height: auto;
       li{
         padding: 10px 10px 10px 40px;
         width: 100%;
+        height: auto;
         transition: 0.2s linear;
         &:hover{
           background: #FF9A24;
@@ -237,6 +275,11 @@
           display: block;
           width: 100%;
           height: 100%;
+          text-align: left;
+          font-size: 17px;
+          &::before{
+            display: none;
+          }
         }
       }
     }

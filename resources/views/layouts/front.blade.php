@@ -9,6 +9,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('front/style/css/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.min.css" rel="stylesheet">
 
     <title>{{ $title ?? config('app.name', 'ФИЛИН IT') }}</title>
 </head>
@@ -21,5 +22,6 @@
     </div>
 
     <script src="{{ asset('front/js/script.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.all.min.js"></script>
 </body>
 </html>

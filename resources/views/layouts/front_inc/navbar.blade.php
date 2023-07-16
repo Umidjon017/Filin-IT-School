@@ -21,14 +21,11 @@
         <ul class="nav__bottom">
             @foreach($headerButtons as $headerButton)
             <li>
-                <a href="{{ $headerButton->url }}" class="active"> {{ $headerButton->name }} </a>
+                <a href="{{ $headerButton->url }}" class="@if(request()->routeIs('questions*') && $headerButton->name == 'Вопросы') active @endif">
+                    {{ $headerButton->name }}
+                </a>
             </li>
             @endforeach
-            @if(! empty($pages)) @foreach($pages as $page)
-            <li>
-                <a href="{{ $page->url }}" class="active"> {{ $page->url }} </a>
-            </li>
-            @endforeach @endif
         </ul>
     </nav>
     <div class="navbar__right">

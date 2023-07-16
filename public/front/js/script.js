@@ -15,24 +15,27 @@ const modal = document.querySelector(".result__modal")
 
 let winWidth = window.innerWidth
 
-modal_btn.onclick = () =>{
-  modal.classList.add("result__modal__open")
-  if (winWidth < 800) {
-    document.body.style = "overflow: hidden"
-  } else {
-    document.body.style = "overflow: hidden; width:calc(100% - 0.4em);"
+if (modal_btn) {
+  modal_btn.onclick = () =>{
+    modal.classList.add("result__modal__open")
+    if (winWidth < 800) {
+      document.body.style = "overflow: hidden"
+    } else {
+      document.body.style = "overflow: hidden; width:calc(100% - 0.4em);"
+    }
   }
-  
 }
 
 function modalClose() {
   modal.classList.remove("result__modal__open")
   document.body.style = "overflow: visible"
 }
-
-rm__close.onclick = modalClose
-modal__close.onclick = modalClose
-
+if (rm__close) {
+  rm__close.onclick = modalClose
+}
+if (modal__close) {
+  modal__close.onclick = modalClose
+}
 
 // Scroll
 let last_known_scroll_position = 0;
@@ -68,3 +71,21 @@ window.addEventListener('scroll', function(e) {
     ticking = true;
   }
 });
+
+// questions
+const answer = document.querySelectorAll(".answer")
+
+if (answer) {
+  for (let i = 0; i < answer.length; i++) {
+    let answer_height = answer[i].clientHeight
+    answer[i].onclick = () =>{
+      console.log(answer[i].childNodes[1].clientHeight)
+      answer[i].classList.toggle("answer__show")
+      if (answer[i].classList.contains("answer__show")) {
+        answer[i].style = `height: ${answer_height + answer[i].childNodes[1].clientHeight - 5}px;`
+      } else{
+        answer[i].style = `height: ${answer_height}px;`
+      }
+    }
+  }
+}
