@@ -12,6 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.min.css" rel="stylesheet">
 
     <title>{{ $title ?? config('app.name', 'ФИЛИН IT') }}</title>
+    @livewireStyles
 </head>
 <body>
 
@@ -20,6 +21,7 @@
     <div class="scroll__up">
         <img src="{{ asset('front/assets/img/static/up.svg') }}" alt="">
     </div>
+    @livewireScripts
 
     <script src="{{ asset('front/js/script.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.all.min.js"></script>

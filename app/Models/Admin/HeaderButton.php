@@ -18,6 +18,6 @@ class HeaderButton extends Model
 
     public function scopeOrder($query)
     {
-        return $query->orderByRaw("CAST(`order` AS UNSIGNED) ASC");
+        return $query->orderBy('order', 'asc');
     }
 }
