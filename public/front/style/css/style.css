@@ -856,7 +856,7 @@ button {
   font-weight: 400;
   line-height: 120%;
   max-width: 540px;
-  width: 100%;
+  width: 100% !important;
 }
 
 .rc1 .result__img {
@@ -2822,6 +2822,11 @@ button {
   line-height: 120%;
 }
 
+#send-Quest {
+  -webkit-transform: translateY(-150px);
+          transform: translateY(-150px);
+}
+
 .pagination {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2842,7 +2847,7 @@ button {
           align-items: flex-end;
   list-style-type: none;
 }
-.pagination ul a, .pagination ul span {
+.pagination ul button, .pagination ul span {
   color: #000;
   font-family: Montserrat;
   font-size: 27px;
@@ -2851,6 +2856,9 @@ button {
   line-height: normal;
   letter-spacing: 4.185px;
   margin: 0 4px;
+  background: none;
+  border: none;
+  outline: none;
 }
 .pagination ul .page__active {
   font-size: 36px;
@@ -2858,7 +2866,7 @@ button {
   pointer-events: none;
 }
 .pagination #page__prev, .pagination #page__next {
-  background: url(../../../assets/img/static/quests/arrow2.svg);
+  background: url(../../../front/assets/img/static/quests/arrow2.svg);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -3049,7 +3057,7 @@ button {
     left: -60px;
     bottom: 190px;
   }
-  .pagination ul a, .pagination ul span {
+  .pagination ul button, .pagination ul span {
     font-size: 22px;
   }
   .pagination ul .page__active {
@@ -3224,7 +3232,7 @@ button {
   .swal2-html-container {
     font-size: 12px !important;
   }
-  .pagination ul a, .pagination ul span {
+  .pagination ul button, .pagination ul span {
     font-size: 14px;
   }
   .pagination ul .page__active {
@@ -3384,7 +3392,7 @@ button {
   .quest__form form {
     padding: 20px;
   }
-  .pagination ul a, .pagination ul span {
+  .pagination ul button, .pagination ul span {
     font-size: 10px;
     margin: 0 2px;
   }

@@ -73,14 +73,14 @@
                         </div> <hr>
                     </div>
 
-                    <div class="col-md-6 col-sm-12">
-                        <h2 class="text-center"> {{ __('Изображения') }} </h2>
-                        <div class="d-flex flex-wrap">
-                            @foreach($page->images as $image)
-                            <img src="{{ asset('/admin/images/pages/'.$image['image']) }}" width="33%" alt="Изображения">
-                            @endforeach
-                        </div>
-                    </div>
+{{--                    <div class="col-md-6 col-sm-12">--}}
+{{--                        <h2 class="text-center"> {{ __('Изображения') }} </h2>--}}
+{{--                        <div class="d-flex flex-wrap">--}}
+{{--                            @foreach($page->images as $image)--}}
+{{--                            <img src="{{ asset('/admin/images/pages/'.$image['image']) }}" width="33%" alt="Изображения">--}}
+{{--                            @endforeach--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
                 </div>
             </div>
 

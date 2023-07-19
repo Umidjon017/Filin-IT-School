@@ -406,6 +406,9 @@
   font-weight: 400;
   line-height: 120%;
 }
+#send-Quest{
+  transform: translateY(-150px);
+}
 .pagination{
   display: flex;
   align-items: center;
@@ -414,7 +417,7 @@
     display: flex;
     align-items: flex-end;
     list-style-type: none;
-    a, span{
+    button, span{
       color: #000;
       font-family: Montserrat;
       font-size: 27px;
@@ -423,6 +426,9 @@
       line-height: normal;
       letter-spacing: 4.185px;
       margin: 0 4px;
+      background: none;
+      border: none;
+      outline: none;
     }
     .page__active{
       font-size: 36px;
@@ -625,7 +631,7 @@
   }
   .pagination{
     ul{
-      a,span{
+      button,span{
         font-size: 22px;
       }
       .page__active{
@@ -797,7 +803,7 @@
   
   .pagination{
     ul{
-      a,span{
+      button,span{
         font-size: 14px;
       }
       .page__active{
@@ -957,7 +963,7 @@
   }
   .pagination{
     ul{
-      a,span{
+      button,span{
         font-size: 10px;
         margin: 0 2px;
       }

@@ -25,18 +25,18 @@
                 <div class="tp_images4"><img src="{{ asset('front/assets/img/static/text-page/rocket.png') }}" alt=""></div>
                 <div class="tp_images5"><img src="{{ asset('front/assets/img/static/text-page/gear.png') }}" alt=""></div>
             </div>
-            <div class="text__page__photo">
-                <p class="tpf__title">
-                    {{ __('может, фото, а может и нет') }}
-                </p>
-                <div class="tp__photos">
-                    @foreach($route->images as $image)
-                    <div class="tp__photo">
-                        <img src="{{ asset('admin/images/pages/'.$image['image']) }}" alt="">
-                    </div>
-                    @endforeach
-                </div>
-            </div>
+{{--            <div class="text__page__photo">--}}
+{{--                <p class="tpf__title">--}}
+{{--                    {{ __('может, фото, а может и нет') }}--}}
+{{--                </p>--}}
+{{--                <div class="tp__photos">--}}
+{{--                    @foreach($route->images as $image)--}}
+{{--                    <div class="tp__photo">--}}
+{{--                        <img src="{{ asset('admin/images/pages/'.$image['image']) }}" alt="">--}}
+{{--                    </div>--}}
+{{--                    @endforeach--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </div>
     </div>
     <!-- Text-page end -->

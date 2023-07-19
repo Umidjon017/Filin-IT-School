@@ -29,7 +29,7 @@
                         </div> --}}
                         <div class="form-group">
                             <label for="body"> {{ __('Текст') }} </label>
-                            <textarea id="body" class="summernote" name="body"> {{ old('body') }} </textarea>
+                            <textarea id="body" class="form-control" name="body"> {{ old('body') }} </textarea>
                             @error('body')
                                 <div class="alert alert-danger">
                                     {{ $message }}

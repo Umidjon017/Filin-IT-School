@@ -35,7 +35,7 @@
                                 <th>{{ __('#') }}</th>
                                 <th>{{ __('Заголовок') }}</th>
                                 {{-- <th>{{ __('Описание') }}</th> --}}
-                                <th>{{ __('Текст') }}</th>
+{{--                                <th>{{ __('Текст') }}</th>--}}
                                 <th>{{ __('Ссылка') }}</th>
                                 <th>{{ __('Статус') }}</th>
                                 <th class="text-center">{{ __('Действия') }}</th>
@@ -47,7 +47,7 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td class="text-break">{{ $page->title }}</td>
 {{--                                    <td class="text-break">{{ $page->description }}</td>--}}
-                                    <td class="text-break">{!! $page->body !!}</td>
+{{--                                    <td class="text-break">{!! $page->body !!}</td>--}}
                                     <td class="text-break">{{ $page->url }}</td>
                                     <td>
                                         @if($page->status == 1)

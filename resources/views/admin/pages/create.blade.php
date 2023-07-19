@@ -54,15 +54,15 @@
                             </div>
                             @enderror
                         </div>
-                        <div class="form-group">
-                            <label for="images" class="form-label"> {{ __('Изображения') }} </label>
-                            <input id="images" type="file" name="images[]" multiple class="form-control" placeholder="Выберите изображения">
-                            @error('images')
-                            <div class="alert alert-danger">
-                                {{ $message }}
-                            </div>
-                            @enderror
-                        </div>
+{{--                        <div class="form-group">--}}
+{{--                            <label for="images" class="form-label"> {{ __('Изображения') }} </label>--}}
+{{--                            <input id="images" type="file" name="images[]" multiple class="form-control" placeholder="Выберите изображения">--}}
+{{--                            @error('images')--}}
+{{--                            <div class="alert alert-danger">--}}
+{{--                                {{ $message }}--}}
+{{--                            </div>--}}
+{{--                            @enderror--}}
+{{--                        </div>--}}
                         <div class="form-group">
                             <div class="control-label"> {{ __('Статус') }} </div>
                             <label class="custom-switch mt-2">

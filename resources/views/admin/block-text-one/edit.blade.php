@@ -30,7 +30,7 @@
                         </div> --}}
                         <div class="form-group">
                             <label for="body"> {{ __('Текст') }} </label>
-                            <textarea id="body" class="summernote" name="body"> {{ $blockTextOne->body }} </textarea>
+                            <textarea id="body" class="form-control" name="body"> {!! $blockTextOne->body !!} </textarea>
                             @error('body')
                                 <div class="alert alert-danger">
                                     {{ $message }}

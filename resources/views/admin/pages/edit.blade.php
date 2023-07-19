@@ -62,27 +62,27 @@
                                 <span class="custom-switch-indicator"></span>
                             </label>
                         </div>
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="form-group">
-                                    <label for="images" class="form-label"> {{ __('Изображения') }} </label>
-                                    <input id="images" type="file" name="images[]" multiple class="form-control" value="{{ $page->images }}">
-                                    @error('images')
-                                    <div class="alert alert-danger">
-                                        {{ $message }}
-                                    </div>
-                                    @enderror
-                                </div>
-                            </div>
+{{--                        <div class="row">--}}
+{{--                            <div class="col-6">--}}
+{{--                                <div class="form-group">--}}
+{{--                                    <label for="images" class="form-label"> {{ __('Изображения') }} </label>--}}
+{{--                                    <input id="images" type="file" name="images[]" multiple class="form-control" value="{{ $page->images }}">--}}
+{{--                                    @error('images')--}}
+{{--                                    <div class="alert alert-danger">--}}
+{{--                                        {{ $message }}--}}
+{{--                                    </div>--}}
+{{--                                    @enderror--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
 
-                            <div class="col-6">
-                                <div>
-                                    @foreach($page->images as $image)
-                                        <img src="{{ asset('/admin/images/pages/'.$image['image']) }}" width="33%" alt="Image">
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
+{{--                            <div class="col-6">--}}
+{{--                                <div>--}}
+{{--                                    @foreach($page->images as $image)--}}
+{{--                                        <img src="{{ asset('/admin/images/pages/'.$image['image']) }}" width="33%" alt="Image">--}}
+{{--                                    @endforeach--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
                         <div class="form-group">
                             <label for="meta_title"> {{ __('Мета-заголовок') }} </label>
                             <input id="meta_title" type="text" class="form-control" name="meta_title" value="{{ $page->meta_title }}">
