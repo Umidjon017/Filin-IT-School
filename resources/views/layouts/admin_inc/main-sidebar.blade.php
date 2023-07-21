@@ -57,6 +57,10 @@
                 <a href="{{ route('admin.questions.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Вопросы") }}</span></a>
             </li>
 
+            <li class="dropdown {{ request()->routeIs('admin.appeals*') ? 'active' : ''  }}">
+                <a href="{{ route('admin.appeals.index') }}" class="nav-link"><i data-feather="monitor"></i><span>{{ __("Обращения") }}</span></a>
+            </li>
+
 
             {{-- @if (Auth::user()->hasAllPermissions(['role-list', 'user-list']))
                 <li class="menu-header"> Xavfsizlik </li>

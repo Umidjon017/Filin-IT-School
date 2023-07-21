@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AppealController;
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\BlockTextOneController;
 use App\Http\Controllers\Admin\BlockTextTwoController;
@@ -55,6 +56,8 @@ Route::prefix('/admin')->name('admin.')->middleware(['auth', 'verified'])->group
     Route::resource('/pages', PageController::class);
     // Questions
     Route::resource('/questions', QuestionController::class);
+    // Appeals
+    Route::resource('/appeals', AppealController::class);
 });
 
 require __DIR__.'/auth.php';
