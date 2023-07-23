@@ -28,7 +28,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Home
 Route::get('/', [HomeController::class, 'index'])->name('home');
+// Contact-us
+Route::get('/contact-us', [HomeController::class, 'contactUs'])->name('contact-us');
 // Questions
 //Route::get('/question', [QuestionControllerFront::class, 'filter'])->name('questions.filter');
 Route::resource('/questions', QuestionControllerFront::class);

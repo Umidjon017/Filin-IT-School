@@ -37,7 +37,7 @@ class AppealController extends Controller
 
         $appeal = Appeal::create($data);
 
-        return redirect()->route('admin.appeals.index')->withSuccess('Успешно создано !');
+        return redirect()->back()->withSuccess('Успешно создано !');
     }
 
     /**

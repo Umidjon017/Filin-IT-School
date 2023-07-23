@@ -1,6 +1,6 @@
 <x-front-layout>
     <x-slot name="title">
-        {{ __('Text Pages') }}
+        {{ $route->title }}
     </x-slot>
 
     <!-- Header start -->

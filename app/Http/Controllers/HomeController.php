@@ -32,11 +32,24 @@ class HomeController extends Controller
         ));
     }
 
+    public function contactUs(): View
+    {
+        $headerButtons = HeaderButton::active()->order()->get();
+        $footerButtons = FooterButton::active()->order()->get();
+        $telephoneAddress = TelephoneAddress::all();
+        $trainingPrograms = TrainingProgram::active()->order()->get();
+
+        return view('front.contact-us', compact(
+            'headerButtons', 'footerButtons', 'telephoneAddress', 'trainingPrograms'
+        ));
+    }
+
     public function page(string $page): View
     {
         $headerButtons = HeaderButton::active()->order()->get();
         $footerButtons = FooterButton::active()->order()->get();
         $telephoneAddress = TelephoneAddress::all();
+        $trainingPrograms = TrainingProgram::active()->order()->get();
         $route = Page::where('status', true)->where('url', $page)->with('images')->first();
 
         if (! $route) {
@@ -44,7 +57,7 @@ class HomeController extends Controller
         }
 
         return view('front.page', compact(
-            'headerButtons', 'footerButtons', 'telephoneAddress', 'route'
+            'headerButtons', 'footerButtons', 'telephoneAddress', 'route', 'trainingPrograms'
         ));
     }
 }

@@ -8,6 +8,7 @@ use App\Models\Admin\FooterButton;
 use App\Models\Admin\HeaderButton;
 use App\Models\Admin\Question;
 use App\Models\Admin\TelephoneAddress;
+use App\Models\Admin\TrainingProgram;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 
@@ -31,9 +32,10 @@ class QuestionController extends Controller
         $headerButtons = HeaderButton::active()->order()->get();
         $footerButtons = FooterButton::active()->order()->get();
         $telephoneAddress = TelephoneAddress::all();
+        $trainingPrograms = TrainingProgram::active()->order()->get();
 
         return view('front.questions', compact(
-            'headerButtons', 'footerButtons', 'telephoneAddress'
+            'headerButtons', 'footerButtons', 'telephoneAddress', 'trainingPrograms'
         ));
     }
 

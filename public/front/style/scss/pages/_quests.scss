@@ -172,8 +172,8 @@
   padding: 40px 145px 0px 50px;
   position: relative;
   cursor: pointer;
-  transition: 
-    // 0.3s linear height, 
+  transition:
+    // 0.3s linear height,
     // 0.4s linear border-radius,
     // 0.4s linear background
     0.4s linear
@@ -207,7 +207,7 @@
     transform: rotate(-180deg);
   }
 }
-// 
+//
 .select {
   display:flex;
   flex-direction: column;
@@ -275,8 +275,8 @@
 
 .select__input:checked + .select__label:after {
   content:'';
-  width: 0; 
-	height: 0; 
+  width: 0;
+	height: 0;
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
 	border-top: 5px solid black;
@@ -296,7 +296,7 @@
   content: '';
   background:url(../../../assets/img/static/quests/filter.png);
 }
-// 
+//
 
 .gear__hidden2 {
   width: 360px;
@@ -705,7 +705,7 @@
       }
     }
   }
-  
+
   .question__title{
     font-size: 25px;
     margin-top: 100px;
@@ -800,7 +800,7 @@
   .swal2-html-container{
     font-size: 12px !important;
   }
-  
+
   .pagination{
     ul{
       button,span{

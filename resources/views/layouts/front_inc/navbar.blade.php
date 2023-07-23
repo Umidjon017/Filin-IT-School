@@ -20,9 +20,19 @@
         </div>
         <ul class="nav__bottom">
             @foreach($headerButtons as $headerButton)
-            <li>
+            <li class="@if($headerButton->name == 'Программы обучения') dropdown @endif">
+                @if($headerButton->name == 'Программы обучения')
+                    <a href="#" style="pointer-events: none;">{{ $headerButton->name }}</a>
+                    <ul class="dropdown__menu">
+                        @foreach($trainingPrograms as $trainingProgram)
+                        <li><a href="{{ $trainingProgram->url }}">{{ $trainingProgram->name }}</a></li>
+                        @endforeach
+                    </ul>
+                @endif
                 <a href="{{ $headerButton->url }}" class="@if(request()->routeIs('questions*') && $headerButton->name == 'Вопросы') active @endif">
-                    {{ $headerButton->name }}
+                    @if($headerButton->name == 'Программы обучения')
+                        @continue($headerButton)
+                    @else {{ $headerButton->name }} @endif
                 </a>
             </li>
             @endforeach

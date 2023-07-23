@@ -12,8 +12,12 @@
     @include('layouts.front_inc.hero')
     <!-- Hero end -->
 
+    <!-- School Info start-->
+    @include('layouts.front_inc.school-info')
+    <!-- School Info end-->
+
     <!-- Steam start -->
-    @include('layouts.front_inc.steam')
+{{--    @include('layouts.front_inc.steam')--}}
     <!-- Steam  end -->
 
     <!-- Programs start -->
