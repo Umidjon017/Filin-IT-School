@@ -33,20 +33,9 @@
                                 <img class="gear_img2" src="{{ asset('front/assets/img/animation/gear.png') }}" alt="">
                                 <img class="gear_img3" src="{{ asset('front/assets/img/animation/gear.png') }}" alt="">
                             </div>
-                            <form action="{{ route('admin.appeals.store') }}" method="post">
-                                @csrf
-                                <p>Оставьте Ваш номер телефона, и мы обязательно перезвоним</p>
-                                <input type="text" name="name" placeholder="Имя" class="rm__input">
-                                <input type="number" name="telephone" placeholder="Номер телефона" class="rm__input">
-                                <label for="check1" class="checkbox__label">
-                                    Я согласен с политикой конфиденциальности
-                                    <input type="checkbox" name="checkbox" id="check1">
-                                    <span class="checkmark"></span>
-                                </label>
-                                <div class="submit__btn">
-                                    <button class="result__modal__btn">ОСТАВИТЬ ЗАЯВКУ</button>
-                                </div>
-                            </form>
+
+                            @livewire('pages.appeal')
+
                         </div>
                     </div>
                 </div>

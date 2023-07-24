@@ -35,6 +35,8 @@ Route::get('/contact-us', [HomeController::class, 'contactUs'])->name('contact-u
 // Questions
 //Route::get('/question', [QuestionControllerFront::class, 'filter'])->name('questions.filter');
 Route::resource('/questions', QuestionControllerFront::class);
+// Appeals
+Route::resource('/appeals', HomeController::class)->only(['index']);
 
 Route::prefix('/admin')->name('admin.')->middleware(['auth', 'verified'])->group(function () {
     // Dashboard
@@ -60,7 +62,7 @@ Route::prefix('/admin')->name('admin.')->middleware(['auth', 'verified'])->group
     // Questions
     Route::resource('/questions', QuestionController::class);
     // Appeals
-    Route::resource('/appeals', AppealController::class);
+    Route::resource('/appeals', AppealController::class)->only(['index', 'destroy']);
 });
 
 require __DIR__.'/auth.php';

@@ -3073,6 +3073,10 @@ button {
   font-weight: 700 !important;
   pointer-events: none;
 }
+.page_active{
+    font-weight: 700 !important;
+    font-size: 31px !important;
+}
 .pagination #page__prev, .pagination #page__next {
   background: url(../../../front/assets/img/static/quests/arrow2.svg);
   background-position: center;
